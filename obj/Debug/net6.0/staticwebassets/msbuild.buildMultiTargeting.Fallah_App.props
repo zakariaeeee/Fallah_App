@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Fallah_App.props" />
+</Project>

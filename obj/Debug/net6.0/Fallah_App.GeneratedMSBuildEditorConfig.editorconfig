@@ -1,0 +1,248 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Fallah_App
+build_property.RootNamespace = Fallah_App
+build_property.ProjectDir = C:\Users\YASSINE\Desktop\PFA\Fallah_App\Fallah_App\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\YASSINE\Desktop\PFA\Fallah_App\Fallah_App
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Authentification/CompteAgriculteur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGlmaWNhdGlvblxDb21wdGVBZ3JpY3VsdGV1ci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Authentification/CompteWebMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGlmaWNhdGlvblxDb21wdGVXZWJNYXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Authentification/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGlmaWNhdGlvblxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Authentification/ModifierCompte.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGlmaWNhdGlvblxNb2RpZmllckNvbXB0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Authentification/ModifierCompteWebMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGlmaWNhdGlvblxNb2RpZmllckNvbXB0ZVdlYk1hc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Authentification/MotDePasseOublier.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGlmaWNhdGlvblxNb3REZVBhc3NlT3VibGllci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Authentification/NombreDeRecuperation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGlmaWNhdGlvblxOb21icmVEZVJlY3VwZXJhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/CategorieTerre/Ajouter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllVGVycmVcQWpvdXRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/CategorieTerre/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllVGVycmVcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/CategorieTerre/Modifier.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllVGVycmVcTW9kaWZpZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Compte/changerpassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHRlXGNoYW5nZXJwYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Compte/Information.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHRlXEluZm9ybWF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Compte/ListAgriculteur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHRlXExpc3RBZ3JpY3VsdGV1ci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/ConseilAujourdhui/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc2VpbEF1am91cmRodWlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/ConseilPlante/Ajouter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc2VpbFBsYW50ZVxBam91dGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/ConseilPlante/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc2VpbFBsYW50ZVxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/ConseilPlante/Modifier.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc2VpbFBsYW50ZVxNb2RpZmllci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/ConseilTerre/Ajouter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc2VpbFRlcnJlXEFqb3V0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/ConseilTerre/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc2VpbFRlcnJlXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/ConseilTerre/ListConseil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc2VpbFRlcnJlXExpc3RDb25zZWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/ConseilTerre/Modifier.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc2VpbFRlcnJlXE1vZGlmaWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Demandes/Information.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kZXNcSW5mb3JtYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Demandes/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kZXNcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/ERROR404/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRVJST1I0MDRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Home/PasDeTerre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXNEZVRlcnJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Inscription/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY3JpcHRpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Notification/Ajouter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uXEFqb3V0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Notification/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Notification/ListNotification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uXExpc3ROb3RpZmljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Notification/Modifier.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uXE1vZGlmaWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Notification/seen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uXHNlZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Notification/Selected.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uXFNlbGVjdGVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Notification/Specefic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uXFNwZWNlZmljLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Notification/unseen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uXHVuc2Vlbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Plante/ajouter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRlXGFqb3V0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Plante/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRlXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Plante/Mesplantes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRlXE1lc3BsYW50ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Plante/Modifier.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRlXE1vZGlmaWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Resultat/listConseilPlant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdWx0YXRcbGlzdENvbnNlaWxQbGFudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Resultat/MesResultat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdWx0YXRcTWVzUmVzdWx0YXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Resultat/resultat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdWx0YXRccmVzdWx0YXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Shared/_LayoutClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRDbGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Sol/Ajouter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29sXEFqb3V0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Sol/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29sXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Sol/Modifier.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29sXE1vZGlmaWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Terre/Ajouter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVycmVcQWpvdXRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Terre/list.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVycmVcbGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Terre/Modifier.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVycmVcTW9kaWZpZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/WebMaster/Ajouter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2ViTWFzdGVyXEFqb3V0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/WebMaster/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2ViTWFzdGVyXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/YASSINE/Desktop/PFA/Fallah_App/Fallah_App/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-lzgi2rfdl4

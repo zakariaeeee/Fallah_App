@@ -1,0 +1,1089 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Fallah_App.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Fallah_App.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\404.html",
+      "PackagePath": "staticwebassets\\404.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\accordion.html",
+      "PackagePath": "staticwebassets\\accordion.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\alert.html",
+      "PackagePath": "staticwebassets\\alert.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\analytics.html",
+      "PackagePath": "staticwebassets\\analytics.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\animations.html",
+      "PackagePath": "staticwebassets\\animations.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\area-charts.html",
+      "PackagePath": "staticwebassets\\area-charts.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\bar-charts.html",
+      "PackagePath": "staticwebassets\\bar-charts.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\buttons.html",
+      "PackagePath": "staticwebassets\\buttons.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\chosen-sprite.png",
+      "PackagePath": "staticwebassets\\chosen-sprite.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\code-editor.html",
+      "PackagePath": "staticwebassets\\code-editor.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\color.html",
+      "PackagePath": "staticwebassets\\color.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\compose-email.html",
+      "PackagePath": "staticwebassets\\compose-email.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\contact.html",
+      "PackagePath": "staticwebassets\\contact.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\animate.css",
+      "PackagePath": "staticwebassets\\css\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\animation\\animation-custom.css",
+      "PackagePath": "staticwebassets\\css\\animation\\animation-custom.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\bootstrap-select\\bootstrap-select.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-select\\bootstrap-select.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\c3\\c3.min.css",
+      "PackagePath": "staticwebassets\\css\\c3\\c3.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\chosen\\chosen-sprite.png",
+      "PackagePath": "staticwebassets\\css\\chosen\\chosen-sprite.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\chosen\\chosen.css",
+      "PackagePath": "staticwebassets\\css\\chosen\\chosen.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\code-editor\\1.jpg",
+      "PackagePath": "staticwebassets\\css\\code-editor\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\code-editor\\ambiance.css",
+      "PackagePath": "staticwebassets\\css\\code-editor\\ambiance.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\code-editor\\codemirror.css",
+      "PackagePath": "staticwebassets\\css\\code-editor\\codemirror.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\color-picker\\farbtastic.css",
+      "PackagePath": "staticwebassets\\css\\color-picker\\farbtastic.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\color-picker\\marker.png",
+      "PackagePath": "staticwebassets\\css\\color-picker\\marker.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\color-picker\\mask.png",
+      "PackagePath": "staticwebassets\\css\\color-picker\\mask.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\color-picker\\wheel.png",
+      "PackagePath": "staticwebassets\\css\\color-picker\\wheel.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\cropper\\cropper.min.css",
+      "PackagePath": "staticwebassets\\css\\cropper\\cropper.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\datapicker\\datepicker3.css",
+      "PackagePath": "staticwebassets\\css\\datapicker\\datepicker3.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\dialog\\dialog.css",
+      "PackagePath": "staticwebassets\\css\\dialog\\dialog.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\dialog\\sweetalert2.min.css",
+      "PackagePath": "staticwebassets\\css\\dialog\\sweetalert2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\dropzone\\dropzone.css",
+      "PackagePath": "staticwebassets\\css\\dropzone\\dropzone.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\jquery.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\jquery.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\jvectormap\\jquery-jvectormap-2.0.3.css",
+      "PackagePath": "staticwebassets\\css\\jvectormap\\jquery-jvectormap-2.0.3.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\meanmenu\\meanmenu.min.css",
+      "PackagePath": "staticwebassets\\css\\meanmenu\\meanmenu.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\metisMenu\\metisMenu-vertical.css",
+      "PackagePath": "staticwebassets\\css\\metisMenu\\metisMenu-vertical.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\metisMenu\\metisMenu.min.css",
+      "PackagePath": "staticwebassets\\css\\metisMenu\\metisMenu.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\normalize.css",
+      "PackagePath": "staticwebassets\\css\\normalize.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\notification\\notification.css",
+      "PackagePath": "staticwebassets\\css\\notification\\notification.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\notika-custom-icon.css",
+      "PackagePath": "staticwebassets\\css\\notika-custom-icon.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\css\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\owl.theme.css",
+      "PackagePath": "staticwebassets\\css\\owl.theme.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\owl.transitions.css",
+      "PackagePath": "staticwebassets\\css\\owl.transitions.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\css\\responsive.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\scrollbar\\jquery.mCustomScrollbar.min.css",
+      "PackagePath": "staticwebassets\\css\\scrollbar\\jquery.mCustomScrollbar.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\summernote\\summernote.css",
+      "PackagePath": "staticwebassets\\css\\summernote\\summernote.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\themesaller-forms.css",
+      "PackagePath": "staticwebassets\\css\\themesaller-forms.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\wave\\button.css",
+      "PackagePath": "staticwebassets\\css\\wave\\button.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\css\\wave\\waves.min.css",
+      "PackagePath": "staticwebassets\\css\\wave\\waves.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\data-map.html",
+      "PackagePath": "staticwebassets\\data-map.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\data-table.html",
+      "PackagePath": "staticwebassets\\data-table.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\dialog.html",
+      "PackagePath": "staticwebassets\\dialog.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\dropdown.html",
+      "PackagePath": "staticwebassets\\dropdown.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\flot-charts.html",
+      "PackagePath": "staticwebassets\\flot-charts.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\fonts\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\fonts\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\fonts\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\fonts\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\fonts\\glyphicons-halflings-regular.woff2",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.woff2"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\fonts\\notika-icon.eot",
+      "PackagePath": "staticwebassets\\fonts\\notika-icon.eot"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\fonts\\notika-icon.svg",
+      "PackagePath": "staticwebassets\\fonts\\notika-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\fonts\\notika-icon.ttf",
+      "PackagePath": "staticwebassets\\fonts\\notika-icon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\fonts\\notika-icon.woff",
+      "PackagePath": "staticwebassets\\fonts\\notika-icon.woff"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\form-components.html",
+      "PackagePath": "staticwebassets\\form-components.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\form-elements.html",
+      "PackagePath": "staticwebassets\\form-elements.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\form-examples.html",
+      "PackagePath": "staticwebassets\\form-examples.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\google-map.html",
+      "PackagePath": "staticwebassets\\google-map.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\image-cropper.html",
+      "PackagePath": "staticwebassets\\image-cropper.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\images\\select.png",
+      "PackagePath": "staticwebassets\\images\\select.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\images\\sort_asc.png",
+      "PackagePath": "staticwebassets\\images\\sort_asc.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\images\\sort_asc_disabled.png",
+      "PackagePath": "staticwebassets\\images\\sort_asc_disabled.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\images\\sort_both.png",
+      "PackagePath": "staticwebassets\\images\\sort_both.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\images\\sort_desc.png",
+      "PackagePath": "staticwebassets\\images\\sort_desc.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\images\\sort_desc_disabled.png",
+      "PackagePath": "staticwebassets\\images\\sort_desc_disabled.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\blog\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\chosen-sprite.png",
+      "PackagePath": "staticwebassets\\img\\chosen-sprite.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\country\\1.png",
+      "PackagePath": "staticwebassets\\img\\country\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\country\\2.png",
+      "PackagePath": "staticwebassets\\img\\country\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\country\\3.png",
+      "PackagePath": "staticwebassets\\img\\country\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\cropper\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\cropper\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\dialog\\like.png",
+      "PackagePath": "staticwebassets\\img\\dialog\\like.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\favicon.ico",
+      "PackagePath": "staticwebassets\\img\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\green1.png",
+      "PackagePath": "staticwebassets\\img\\green1.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\logo\\favicon.png",
+      "PackagePath": "staticwebassets\\img\\logo\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\logo\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\post\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\post\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\post\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\post\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\post\\4.jpg",
+      "PackagePath": "staticwebassets\\img\\post\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\search-engines\\baidu.png",
+      "PackagePath": "staticwebassets\\img\\search-engines\\baidu.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\search-engines\\bing.png",
+      "PackagePath": "staticwebassets\\img\\search-engines\\bing.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\search-engines\\duckduckgo.png",
+      "PackagePath": "staticwebassets\\img\\search-engines\\duckduckgo.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\search-engines\\google.png",
+      "PackagePath": "staticwebassets\\img\\search-engines\\google.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\search-engines\\yahoo.png",
+      "PackagePath": "staticwebassets\\img\\search-engines\\yahoo.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\search-engines\\yandex.png",
+      "PackagePath": "staticwebassets\\img\\search-engines\\yandex.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\widgets\\2.png",
+      "PackagePath": "staticwebassets\\img\\widgets\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\widgets\\4.png",
+      "PackagePath": "staticwebassets\\img\\widgets\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\img\\widgets\\6.png",
+      "PackagePath": "staticwebassets\\img\\widgets\\6.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\inbox.html",
+      "PackagePath": "staticwebassets\\inbox.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\index-2.html",
+      "PackagePath": "staticwebassets\\index-2.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\index-3.html",
+      "PackagePath": "staticwebassets\\index-3.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\index-4.html",
+      "PackagePath": "staticwebassets\\index-4.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\invoice.html",
+      "PackagePath": "staticwebassets\\invoice.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\animation\\animation-active.js",
+      "PackagePath": "staticwebassets\\js\\animation\\animation-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\autosize.min.js",
+      "PackagePath": "staticwebassets\\js\\autosize.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\bootstrap-select\\bootstrap-select.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap-select\\bootstrap-select.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\charts\\Chart.js",
+      "PackagePath": "staticwebassets\\js\\charts\\Chart.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\charts\\area-chart.js",
+      "PackagePath": "staticwebassets\\js\\charts\\area-chart.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\charts\\bar-chart.js",
+      "PackagePath": "staticwebassets\\js\\charts\\bar-chart.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\charts\\line-chart.js",
+      "PackagePath": "staticwebassets\\js\\charts\\line-chart.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\chat\\jquery.chat.js",
+      "PackagePath": "staticwebassets\\js\\chat\\jquery.chat.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\chat\\moment.min.js",
+      "PackagePath": "staticwebassets\\js\\chat\\moment.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\chosen\\chosen.jquery.js",
+      "PackagePath": "staticwebassets\\js\\chosen\\chosen.jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\code-editor\\code-editor-active.js",
+      "PackagePath": "staticwebassets\\js\\code-editor\\code-editor-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\code-editor\\code-editor.js",
+      "PackagePath": "staticwebassets\\js\\code-editor\\code-editor.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\code-editor\\codemirror.js",
+      "PackagePath": "staticwebassets\\js\\code-editor\\codemirror.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\color-picker\\color-picker.js",
+      "PackagePath": "staticwebassets\\js\\color-picker\\color-picker.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\color-picker\\farbtastic.min.js",
+      "PackagePath": "staticwebassets\\js\\color-picker\\farbtastic.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\counterup\\counterup-active.js",
+      "PackagePath": "staticwebassets\\js\\counterup\\counterup-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\counterup\\jquery.counterup.min.js",
+      "PackagePath": "staticwebassets\\js\\counterup\\jquery.counterup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\counterup\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\js\\counterup\\waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\cropper\\cropper-actice.js",
+      "PackagePath": "staticwebassets\\js\\cropper\\cropper-actice.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\cropper\\cropper.min.js",
+      "PackagePath": "staticwebassets\\js\\cropper\\cropper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\data-map\\d3.min.js",
+      "PackagePath": "staticwebassets\\js\\data-map\\d3.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\data-map\\data-maps-active.js",
+      "PackagePath": "staticwebassets\\js\\data-map\\data-maps-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\data-map\\datamaps.all.min.js",
+      "PackagePath": "staticwebassets\\js\\data-map\\datamaps.all.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\data-map\\topojson.js",
+      "PackagePath": "staticwebassets\\js\\data-map\\topojson.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\data-table\\data-table-act.js",
+      "PackagePath": "staticwebassets\\js\\data-table\\data-table-act.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\data-table\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\js\\data-table\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\datapicker\\bootstrap-datepicker.js",
+      "PackagePath": "staticwebassets\\js\\datapicker\\bootstrap-datepicker.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\datapicker\\datepicker-active.js",
+      "PackagePath": "staticwebassets\\js\\datapicker\\datepicker-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\dialog\\dialog-active.js",
+      "PackagePath": "staticwebassets\\js\\dialog\\dialog-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\dialog\\sweetalert2.min.js",
+      "PackagePath": "staticwebassets\\js\\dialog\\sweetalert2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\dropzone\\dropzone.js",
+      "PackagePath": "staticwebassets\\js\\dropzone\\dropzone.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\easytopie\\jquery.easypiechart.min.js",
+      "PackagePath": "staticwebassets\\js\\easytopie\\jquery.easypiechart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\easytopie\\salvattore.min.js",
+      "PackagePath": "staticwebassets\\js\\easytopie\\salvattore.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\flot\\analtic-flot-active.js",
+      "PackagePath": "staticwebassets\\js\\flot\\analtic-flot-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\flot\\chart-tooltips.js",
+      "PackagePath": "staticwebassets\\js\\flot\\chart-tooltips.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\flot\\curvedLines.js",
+      "PackagePath": "staticwebassets\\js\\flot\\curvedLines.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\flot\\flot-active.js",
+      "PackagePath": "staticwebassets\\js\\flot\\flot-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\flot\\flot-widget-anatic-active.js",
+      "PackagePath": "staticwebassets\\js\\flot\\flot-widget-anatic-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\flot\\jquery.flot.js",
+      "PackagePath": "staticwebassets\\js\\flot\\jquery.flot.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\flot\\jquery.flot.orderBars.js",
+      "PackagePath": "staticwebassets\\js\\flot\\jquery.flot.orderBars.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\flot\\jquery.flot.pie.js",
+      "PackagePath": "staticwebassets\\js\\flot\\jquery.flot.pie.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\flot\\jquery.flot.resize.js",
+      "PackagePath": "staticwebassets\\js\\flot\\jquery.flot.resize.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\flot\\jquery.flot.time.js",
+      "PackagePath": "staticwebassets\\js\\flot\\jquery.flot.time.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\flot\\jquery.flot.tooltip.min.js",
+      "PackagePath": "staticwebassets\\js\\flot\\jquery.flot.tooltip.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\google.maps\\google.maps-active.js",
+      "PackagePath": "staticwebassets\\js\\google.maps\\google.maps-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\google.maps\\google.maps2-active.js",
+      "PackagePath": "staticwebassets\\js\\google.maps\\google.maps2-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\icheck\\icheck-active.js",
+      "PackagePath": "staticwebassets\\js\\icheck\\icheck-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\icheck\\icheck.min.js",
+      "PackagePath": "staticwebassets\\js\\icheck\\icheck.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\jasny-bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\jasny-bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\jquery-price-slider.js",
+      "PackagePath": "staticwebassets\\js\\jquery-price-slider.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\jquery.scrollUp.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.scrollUp.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\jvectormap\\jquery-jvectormap-2.0.2.min.js",
+      "PackagePath": "staticwebassets\\js\\jvectormap\\jquery-jvectormap-2.0.2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\jvectormap\\jquery-jvectormap-world-mill-en.js",
+      "PackagePath": "staticwebassets\\js\\jvectormap\\jquery-jvectormap-world-mill-en.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\jvectormap\\jvectormap-active.js",
+      "PackagePath": "staticwebassets\\js\\jvectormap\\jvectormap-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\knob\\jquery.appear.js",
+      "PackagePath": "staticwebassets\\js\\knob\\jquery.appear.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\knob\\jquery.knob.js",
+      "PackagePath": "staticwebassets\\js\\knob\\jquery.knob.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\knob\\knob-active.js",
+      "PackagePath": "staticwebassets\\js\\knob\\knob-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\login\\login-action.js",
+      "PackagePath": "staticwebassets\\js\\login\\login-action.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\meanmenu\\jquery.meanmenu.js",
+      "PackagePath": "staticwebassets\\js\\meanmenu\\jquery.meanmenu.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\metisMenu\\metisMenu-active.js",
+      "PackagePath": "staticwebassets\\js\\metisMenu\\metisMenu-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\metisMenu\\metisMenu.min.js",
+      "PackagePath": "staticwebassets\\js\\metisMenu\\metisMenu.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\notification\\bootstrap-growl.min.js",
+      "PackagePath": "staticwebassets\\js\\notification\\bootstrap-growl.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\notification\\notification-active.js",
+      "PackagePath": "staticwebassets\\js\\notification\\notification-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\plugins.js",
+      "PackagePath": "staticwebassets\\js\\plugins.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\rangle-slider\\jquery-ui-1.10.4.custom.min.js",
+      "PackagePath": "staticwebassets\\js\\rangle-slider\\jquery-ui-1.10.4.custom.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\rangle-slider\\jquery-ui-touch-punch.min.js",
+      "PackagePath": "staticwebassets\\js\\rangle-slider\\jquery-ui-touch-punch.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\rangle-slider\\rangle-active.js",
+      "PackagePath": "staticwebassets\\js\\rangle-slider\\rangle-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\scrollbar\\jquery.mCustomScrollbar.concat.min.js",
+      "PackagePath": "staticwebassets\\js\\scrollbar\\jquery.mCustomScrollbar.concat.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\sparkline\\jquery.sparkline.min.js",
+      "PackagePath": "staticwebassets\\js\\sparkline\\jquery.sparkline.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\sparkline\\sparkline-active.js",
+      "PackagePath": "staticwebassets\\js\\sparkline\\sparkline-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\summernote\\summernote-active.js",
+      "PackagePath": "staticwebassets\\js\\summernote\\summernote-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\summernote\\summernote-updated.min.js",
+      "PackagePath": "staticwebassets\\js\\summernote\\summernote-updated.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\summernote\\summernote.min.js",
+      "PackagePath": "staticwebassets\\js\\summernote\\summernote.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\tawk-chat.js",
+      "PackagePath": "staticwebassets\\js\\tawk-chat.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\todo\\jquery.todo.js",
+      "PackagePath": "staticwebassets\\js\\todo\\jquery.todo.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\vendor\\jquery-1.12.4.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\jquery-1.12.4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\vendor\\modernizr-2.8.3.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\modernizr-2.8.3.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\wave\\wave-active.js",
+      "PackagePath": "staticwebassets\\js\\wave\\wave-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\wave\\waves.min.js",
+      "PackagePath": "staticwebassets\\js\\wave\\waves.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\wizard\\jquery.bootstrap.wizard.min.js",
+      "PackagePath": "staticwebassets\\js\\wizard\\jquery.bootstrap.wizard.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\wizard\\wizard-active.js",
+      "PackagePath": "staticwebassets\\js\\wizard\\wizard-active.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\js\\wow.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\line-charts.html",
+      "PackagePath": "staticwebassets\\line-charts.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\login-register.html",
+      "PackagePath": "staticwebassets\\login-register.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\modals.html",
+      "PackagePath": "staticwebassets\\modals.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\normal-table.html",
+      "PackagePath": "staticwebassets\\normal-table.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\notification.html",
+      "PackagePath": "staticwebassets\\notification.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\popovers.html",
+      "PackagePath": "staticwebassets\\popovers.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\style.css",
+      "PackagePath": "staticwebassets\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\tabs.html",
+      "PackagePath": "staticwebassets\\tabs.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\tooltips.html",
+      "PackagePath": "staticwebassets\\tooltips.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\typography.html",
+      "PackagePath": "staticwebassets\\typography.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\view-email.html",
+      "PackagePath": "staticwebassets\\view-email.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\widgets.html",
+      "PackagePath": "staticwebassets\\widgets.html"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\falla7App\\Fallah_App\\Fallah_App\\wwwroot\\wizard.html",
+      "PackagePath": "staticwebassets\\wizard.html"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Fallah_App.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Fallah_App.props",
+      "PackagePath": "build\\Fallah_App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Fallah_App.props",
+      "PackagePath": "buildMultiTargeting\\Fallah_App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Fallah_App.props",
+      "PackagePath": "buildTransitive\\Fallah_App.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
