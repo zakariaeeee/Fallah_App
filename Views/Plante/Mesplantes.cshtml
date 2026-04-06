@@ -1,0 +1,75 @@
+﻿@model List<Fallah_App.Models.Plante>
+@section title{
+    <title>Liste des Plantes</title>
+}
+
+    <div class="breadcomb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcomb-list">
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="breadcomb-wp">
+                                    <div class="breadcomb-icon">
+                                        <i class="notika-icon notika-windows"></i>
+                                    </div>
+                                    <div class="breadcomb-ctn">
+                                        <h2>Plante</h2>
+                                        <p>Mes plantes</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcomb area End-->
+    <!-- Data Table area Start-->
+    <div class="data-table-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="data-table-list">
+                        <div class="table-responsive">
+                            <table id="data-table-basic" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Nom</th>
+                                        <th>Type</th>
+                                        <th>Mois de debut</th>
+                                        <th>Mois de fin</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                @foreach (Plante p in Model)
+                                {
+                                    <tr>
+                                        <td>@p.Nom</td>
+                                        <td>@p.type</td>
+                                        <td>@ViewBag.mois[p.Debut_Period]</td>
+                                        <td>@ViewBag.mois[p.Fin_Date]</td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>Type</th>
+                                    <th>Mois de debut</th>
+                                    <th>Mois de fin</th>
+
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

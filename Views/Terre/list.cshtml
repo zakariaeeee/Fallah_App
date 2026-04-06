@@ -1,0 +1,98 @@
+﻿﻿
+@model List<Fallah_App.Models.Terre>
+@section title
+    {
+    <title>Liste Terre</title>
+}
+    @section style
+    {
+    <style>
+        .bootstrap-select {
+            width: 100% !important;
+        }
+
+        .dcenter {
+            display: flex !important;
+            justify-content: center !important;
+        }
+
+        .hrzn-fm {
+            font-weight: bold !important;
+        }
+
+        .img-responsive {
+            max-width: 100% !important;
+            height: 70px !important;
+        }
+
+    </style>
+}
+    <div class="breadcomb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcomb-list">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="breadcomb-wp">
+                                    <div class="breadcomb-icon">
+                                        <i class="notika-icon notika-windows"></i>
+                                    </div>
+                                    <div class="breadcomb-ctn">
+                                        <h2>Terre</h2>
+                                        <p>List de Vos Terres</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Breadcomb area End-->
+<!-- Data Table area Start-->
+<div class="data-table-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="data-table-list">
+                    <div class="table-responsive">
+                        <table id="data-table-basic" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>image</th>
+                                    <th>surface</th>
+                                    <th>Lattitude</th>
+                                    <th>Longtitude</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (Terre t in Model)
+                                {
+                                        <tr>
+                                            <td>
+                                            <img class="img-responsive" src="~/ImageTerre/@t.image" />
+                                            </td>
+                                            <td>@t.Surface</td>
+                                            <td>@t.latitude</td>
+                                            <td>@t.longitude</td>
+                                            <td>
+                                                <a class="btn btn-success success-icon-notika btn-reco-mg btn-button-mg " href="Modifier?id=@t.Id" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="modifier cette terre" title="" data-original-title="modifier">
+                                                    <i class="notika-icon notika-draft"></i>
+                                                    </a>
+                                                <a class="btn btn-deeporange deeporange-icon-notika btn-reco-mg btn-button-mg sa-warning" data-confirm="Supprimer" data-text="Cette terre vas étre supprimer" data-href="/Terre/supprimer/@t.Id" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="supprimer cette Terre" data-original-title="Supprimer">
+                                                    <i class="notika-icon notika-close"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

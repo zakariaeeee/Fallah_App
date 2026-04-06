@@ -1,0 +1,98 @@
+﻿@section title{
+    <title>Liste des Demandes</title>
+}
+
+<div class="breadcomb-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="breadcomb-list">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="breadcomb-wp">
+                                <div class="breadcomb-icon">
+                                    <i class="notika-icon notika-windows"></i>
+                                </div>
+                                <div class="breadcomb-ctn">
+                                    <h2>Liste des demandes</h2>
+                                    <p>Liste des demandes de creation de comptes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcomb area End-->
+<!-- Data Table area Start-->
+<div class="data-table-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="data-table-list">
+                    <div class="table-responsive">
+                        <table id="data-table-basic" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>Prenom</th>
+                                    <th>Date de Naissance</th>
+                                    <th>Date de demande</th>
+                                    <th>Statut</th>
+                                    <th>Detail</th>
+                                    <th>Action</th>
+
+                                </tr>
+                            </thead>
+                           <tbody>
+                            @foreach(Demande demande in Model){
+                                    <tr>
+                                        <td>@demande.Nom</td>
+                                        <td>@demande.Prenom</td>
+                                        <td>@demande.Date_De_Naissance</td>
+                                        <td>@demande.Date_Demande</td>
+                                        @if (demande.Statut == false)
+                                        {
+                                            <td>En Attend</td>
+                                        }else{
+                                            <td>Refuser</td>
+                                        }
+                                        <td>
+                                            <a class="btn btn-lightblue lightblue-icon-notika" href="/Demandes/Information/@demande.Id" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="Afficher tous les Informations du @demande.Nom" title="" data-original-title="Detail">
+                                               <i class="notika-icon notika-next"></i>
+                                           </a>
+                                        </td>
+                                        <td>
+                                           @if (demande.Statut == false)
+                                           {
+                                            <a class="btn btn-success success-icon-notika btn-reco-mg btn-button-mg sa-warning" data-confirm="Accepter" data-Action="Accepter!" data-acc="La demande a ete bien accepter" data-text="La demande vas etre Accepter" data-href="/Demandes/Accepter/@demande.Id" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="Accepter la demande du @demande.Nom" title="" data-original-title="Accepter">
+                                                <i class="notika-icon notika-checked"></i>
+                                            </a>
+                                            <a class="btn btn-deeporange deeporange-icon-notika btn-reco-mg btn-button-mg sa-warning" data-confirm="Refuser" data-Action="Refuser!" data-acc="La demande a ete bien Refuser" data-text="La demande vas etre Refuser" data-href="/Demandes/Refuser/@demande.Id" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="Refuser la demande du @demande.Nom" title="" data-original-title="Refuser">
+                                                <i class="notika-icon notika-close"></i>
+                                            </a>
+                                            }
+                                        </td>
+                                    </tr>
+                            }
+                           </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>Prenom</th>
+                                    <th>Date de Naissance</th>
+                                    <th>Date de demande</th>
+                                    <th>Statut</th>
+                                    <th>Detail</th>
+                                    <th>Action</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

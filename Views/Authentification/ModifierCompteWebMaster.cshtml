@@ -1,0 +1,161 @@
+﻿@model Fallah_App.Models.WebMaster
+@section title
+    {
+    <title>Modifier Compte</title>
+}
+    @section style
+    {
+    <link rel="stylesheet" href="~/css/bootstrap-select/bootstrap-select.css">
+    <style>
+        .bootstrap-select {
+            width: 100% !important;
+        }
+
+        .dcenter {
+            display: flex !important;
+            justify-content: center !important;
+        }
+
+        .hrzn-fm {
+            font-weight: bold !important;
+        }
+
+    </style>
+}
+    <div class="breadcomb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcomb-list">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="breadcomb-wp">
+                                    <div class="breadcomb-icon">
+                                        <i class="notika-icon notika-edit"></i>
+                                    </div>
+                                    <div class="breadcomb-ctn">
+                                        <h2>Compte</h2>
+                                        <p>Modifier Votre Compte</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-example-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                    <div class="form-example-wrap mg-t-30">
+                        <div class="dcenter w-100">
+                            <div style="width:60%;">
+                                <form method="post" enctype="multipart/form-data">
+                                    <div class="form-example-int form-horizental">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                                    <label class="hrzn-fm">Nom</label>
+                                                </div>
+                                                <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                    <div class="nk-int-st">
+                                                        <input class="form-control input-lg" asp-for="Nom">
+                                                    </div>
+                                                    <span asp-validation-for="Nom" class="text-danger"></span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-example-int form-horizental">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                                    <label class="hrzn-fm">Prenom</label>
+                                                </div>
+                                                <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                    <div class="nk-int-st">
+                                                        <input class="form-control input-lg" asp-for="Prenom">
+                                                    </div>
+                                                    <span asp-validation-for="Prenom" class="text-danger"></span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-example-int form-horizental">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                                    <label class="hrzn-fm">E-mail</label>
+                                                </div>
+                                                <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                    <div class="nk-int-st">
+                                                        <input class="form-control input-lg" asp-for="Email">
+                                                    </div>
+                                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                                    <span class="text-danger">@ViewData["errorEmail"]</span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-example-int form-horizental">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                                    <label class="hrzn-fm">Login</label>
+                                                </div>
+                                                <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                    <div class="nk-int-st">
+                                                        <input class="form-control input-lg" asp-for="Login">
+                                                    </div>
+                                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                                    <span class="text-danger">@ViewData["erorLogin"]</span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-example-int form-horizental">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                                    <label class="hrzn-fm">File</label>
+                                                </div>
+                                                <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                    <div class="nk-int-st">
+                                                        <input class="form-control input-lg" name="file" type="file">
+                                                    </div>
+                                                    <span class="text-danger">@ViewData["erorImage"]</span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-example-int mg-t-15">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-7 col-sm-7 col-xs-12 dcenter">
+                                                <button class="btn btn-success notika-btn-success" type="submit">Modifier</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section script
+    {
+    <script src="~/js/bootstrap-select/bootstrap-select.js"></script>
+    <script src="~/js/jquery.scrollUp.min.js"></script>
+  }

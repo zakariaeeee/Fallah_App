@@ -1,0 +1,73 @@
+﻿@section title{
+    <title>Mes Resultat</title>
+}
+
+<div class="breadcomb-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="breadcomb-list">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="breadcomb-wp">
+                                <div class="breadcomb-icon">
+                                    <i class="notika-icon notika-windows"></i>
+                                </div>
+                                <div class="breadcomb-ctn">
+                                    <h2>Liste des Resultat</h2>
+                                    <p>Liste des Resultat de Conseil Plante </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcomb area End-->
+<!-- Data Table area Start-->
+<div class="data-table-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="data-table-list">
+                    <div class="table-responsive">
+                        <table id="data-table-basic" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Date_De_Saisie</th>
+                                    <th>Statut_Favorable</th>
+                                    <th>Date de creation du Conseil Plante</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var r in ViewBag.list)
+                                {
+                                    <tr>
+                                        <td>@Html.Raw(r.Description)</td>
+                                        <td>@r.Date_De_Saisie</td>
+                                        @if (@r.Statut_Favorable == 1)
+                                        {
+                                            <td>Favorable</td>
+                                        }
+                                        @if (@r.Statut_Favorable == 0)
+                                        {
+                                            <td>Non Favorable</td>
+                                        }
+                                        @if (@r.Statut_Favorable == -1)
+                                        {
+                                            <td>Sans Status</td>
+                                        }
+                                        <td>@r.ConseilPlante.Date_De_Creation</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

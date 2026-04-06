@@ -1,0 +1,219 @@
+﻿@section title
+    {
+    <title>List Conseil Terre</title>
+}
+    @section style
+    {
+    <link rel="stylesheet" href="~/css/bootstrap-select/bootstrap-select.css">
+    <style>
+        .audio-player {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .audio-controls {
+            display: flex;
+            align-items: center;
+        }
+
+            .audio-controls button {
+                margin: 0 5px;
+                padding: 5px;
+                border: none;
+                background-color: #eaeaea;
+                cursor: pointer;
+            }
+
+                .audio-controls button:hover {
+                    background-color: #d5d5d5;
+                }
+
+        .audio-time {
+            margin-top: 10px;
+        }
+
+        .audio-seek-bar {
+            width: 200px;
+            height: 10px;
+            background-color: #eaeaea;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .audio-progress {
+            height: 100%;
+            background-color: #6fdc7e;
+        }
+    </style>
+}
+    <!-- Main Menu area End-->
+    <!-- Breadcomb area Start-->
+
+    <div class="breadcomb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcomb-list">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="breadcomb-wp">
+                                    <div class="breadcomb-icon">
+                                        <i class="notika-icon notika-windows"></i>
+                                    </div>
+                                    <div class="breadcomb-ctn">
+                                        <h2>Conseil Terre </h2>
+                                        <p>List des Conseils</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcomb area End-->
+    <!-- Contact area Start-->
+    <div class="contact-area">
+        <div class="container">
+            <div class="row">
+            @foreach (ConseilTerre ct in ViewBag.conseilTerres)
+            {
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-5">
+                    <div class="contact-list">
+                        <div class="contact-win">
+                            <div class="conct-sc-ic">
+                                <a class="btn" data-toggle="modal" data-target="#fr_@ct.Id">F</a>
+                                <a class="btn" data-toggle="modal" data-target="#ar_@ct.Id">A</a>
+                            </div>
+                        </div>
+                        <div class="contact-ctn mb-70">
+                            <div class="contact-ad-hd">
+                                <h2>@ct.webMaster.Nom</h2>
+                                @foreach (CategoryTerre cc in ct.CategoryTerres)
+                                {
+                                    <p class="ctn-ads">@cc.Attribut_De_Categorisation   @cc.Valeur_Max  @cc.Valeur_Min</p>
+                                }
+                            </div>
+                            <div class="audio-player">
+                                <audio class="audio" src="~/Audio/@ct.Audio"></audio>
+                                <div class="audio-controls">
+                                    <button class="play-btn">Play</button>
+                                    <button class="pause-btn">Pause</button>
+                                    <button class="stop-btn">Stop</button>
+                                </div>
+                                <div class="audio-time">0:00 / 0:00</div>
+                                <div class="audio-seek-bar">
+                                    <div class="audio-progress"></div>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="social-st-list mt-5 d-flex justify-content-center">
+                                <div class="social-sn">
+                                    <a class="btn btn-amber amber-icon-notika btn-reco-mg btn-button-mg waves-effect" asp-controller="Resultat" asp-action="resultat" asp-route-id="@ct.Id" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="Donner votre resultat" title="" data-original-title="Resultat">
+                                        <i class="notika-icon notika-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="fr_@ct.Id" role="dialog">
+                    <div class="modal-dialog modals-default">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <h2>Conseil</h2>
+                                <p>@Html.Raw(ct.Text_Francais)</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Ferme</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="ar_@ct.Id" role="dialog">
+                    <div class="modal-dialog modals-default">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <h2>النصيحة</h2>
+                                <p>@Html.Raw(ct.Text_Arabe)</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">إغلاق</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+</div>
+
+
+@section script
+    {
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const audioPlayers = document.querySelectorAll('.audio-player');
+
+            audioPlayers.forEach(player => {
+                const audio = player.querySelector('.audio');
+                const playBtn = player.querySelector('.play-btn');
+                const pauseBtn = player.querySelector('.pause-btn');
+                const stopBtn = player.querySelector('.stop-btn');
+                const audioTime = player.querySelector('.audio-time');
+                const audioSeekBar = player.querySelector('.audio-seek-bar');
+                const audioProgress = player.querySelector('.audio-progress');
+
+                playBtn.addEventListener('click', () => {
+                    audio.play();
+                });
+
+                pauseBtn.addEventListener('click', () => {
+                    audio.pause();
+                });
+
+                stopBtn.addEventListener('click', () => {
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+
+                audio.addEventListener('loadedmetadata', () => {
+                    audio.addEventListener('timeupdate', () => {
+                        const currentTime = audio.currentTime;
+                        const duration = audio.duration;
+                        const minutes = Math.floor(currentTime / 60);
+                        const seconds = Math.floor(currentTime % 60);
+                        const formattedCurrentTime = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                        const totalMinutes = Math.floor(duration / 60);
+                        const totalSeconds = Math.floor(duration % 60);
+                        const formattedDuration = `${totalMinutes}:${totalSeconds < 10 ? '0' : ''}${totalSeconds}`;
+                        audioTime.textContent = `${formattedCurrentTime} / ${formattedDuration}`;
+
+                        const progressPercent = (currentTime / duration) * 100;
+                        audioProgress.style.width = `${progressPercent}%`;
+                    });
+                });
+
+                audioSeekBar.addEventListener('click', (event) => {
+                    const seekBarRect = audioSeekBar.getBoundingClientRect();
+                    const clickPosition = event.clientX - seekBarRect.left;
+                    const seekPercent = clickPosition / audioSeekBar.offsetWidth;
+                    const seekTime = seekPercent * audio.duration;
+                    audio.currentTime = seekTime;
+                });
+            });
+        });
+    </script>
+
+  }

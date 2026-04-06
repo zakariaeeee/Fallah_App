@@ -1,0 +1,85 @@
+﻿@model Fallah_App.Models.Demande
+@{
+    Layout="_LayoutClient";
+}
+@section title{
+    <title>Inscription</title>
+}
+<div class="checkout_area mb-100">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-12 col-lg-7">
+                <div class="checkout_details_area clearfix">
+                    <form action="#" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label for="first_name">Nom</label>
+                                <input type="text" class="form-control" id="first_name" asp-for="Nom" >
+                                <span class="text-danger" asp-validation-for="Nom"></span>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="last_name">Prenom</label>
+                                <input type="text" class="form-control" id="last_name" asp-for="Prenom" >
+                                <span class="text-danger" asp-validation-for="Prenom"></span>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <label for="email_address">Email Address *</label>
+                                <input type="email" class="form-control" id="email_address" asp-for="Email" >
+                                    <span class="text-danger">@ViewData["errorEmail"]</span>
+                                <span asp-validation-for="Email"></span>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <label for="phone_number">Numero telephone</label>
+                                <input type="text" class="form-control" id="phone_number" asp-for="Telephone" >
+                                <span asp-validation-for="Telephone" class="text-danger"></span>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <label for="Date_De_Naissance">Date_De_Naissance</label>
+                                <input type="date" class="form-control" id="Date_De_Naissance" pattern="MM-dd-yy" asp-for="Date_De_Naissance" >
+                                <span asp-validation-for="Date_De_Naissance" class="text-danger"></span>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <label for="Login">Login</label>
+                                <input type="text" class="form-control" id="Login" asp-for="Login" >
+                                <span class="text-danger">@ViewData["erorLogin"]</span>
+                                <span asp-validation-for="Login" class="text-danger"></span>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <label for="Password">Mot de passe</label>
+                                <input type="password" class="form-control" id="Password" asp-for="Password" >
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="conf_Password">Confirmation</label>
+                                <input type="password" class="form-control" id="conf_Password" asp-for="conf_Password">
+                                <span asp-validation-for="conf_Password" class="text-danger"></span>
+                                    <span class="text-danger">@ViewData["message1"]</span>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <label for="file">choisie une image</label>
+                                <input type="file" class="form-control" asp-for="file" >
+                                <span class="text-danger">@ViewData["erorImage"]</span>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex align-items-center">
+                                    <!-- Single Checkbox -->
+                                    <div class="custom-control custom-checkbox d-flex align-items-center mr-30">
+                                        <input type="checkbox" class="custom-control-input" asp-for=forme id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Vous etes former?</label>
+                                    </div>
+                                    <!-- Single Checkbox -->
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-success">Valider</button>
+                            </div>
+                        </div>
+                        <samp class="text-success">@ViewData["message"]</samp>
+                    </form>
+                </div>
+            </div>
+        </div> 
+  </div>
+</div> 

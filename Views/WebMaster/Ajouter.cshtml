@@ -1,0 +1,191 @@
+﻿@model Fallah_App.Models.WebMaster
+@section title
+    {
+    <title>Ajouter Admin</title>
+}
+    @section style
+    {
+    <link rel="stylesheet" href="~/css/bootstrap-select/bootstrap-select.css">
+    <style>
+        .bootstrap-select {
+            width: 100% !important;
+        }
+
+        .dcenter {
+            display: flex !important;
+            justify-content: center !important;
+        }
+
+        .hrzn-fm {
+            font-weight: bold !important;
+        }
+
+    </style>
+}
+
+<div class="breadcomb-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="breadcomb-list">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="breadcomb-wp">
+                                <div class="breadcomb-icon">
+                                    <i class="notika-icon notika-windows"></i>
+                                </div>
+                                <div class="breadcomb-ctn">
+                                        <h2>Admin </h2>
+                                        <p>Ajouter un admin</p>
+                               
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="form-example-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                    <div class="form-example-wrap mg-t-30">
+                        <div class="dcenter w-100">
+                            <div style="width:60%;">
+                            <form method="post" enctype="multipart/form-data">
+                                    <div class="form-example-int form-horizental">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                                    <label class="hrzn-fm">Nom</label>
+                                                </div>
+                                                <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                    <div class="nk-int-st">
+                                                        <input class="form-control input-lg" asp-for="Nom" placeholder="Tapez votre nom">
+                                                    </div>
+                                                    <span asp-validation-for="Nom" class="text-danger"></span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-example-int form-horizental">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                                    <label class="hrzn-fm">Prenom</label>
+                                                </div>
+                                                <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                    <div class="nk-int-st">
+                                                        <input class="form-control input-lg" asp-for="Prenom" placeholder="Tapez votre prenom">
+                                                    </div>
+                                                    <span asp-validation-for="Prenom" class="text-danger"></span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-example-int form-horizental">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                                    <label class="hrzn-fm">Login</label>
+                                                </div>
+                                                <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                    <div class="nk-int-st">
+                                                        <input class="form-control input-lg" asp-for="Login" placeholder="Tapez votre login">
+                                                    </div>
+                                                    <span asp-validation-for="Login" class="text-danger"></span>
+                                                    <span class="text-danger">@ViewData["erorLogin"]</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-example-int form-horizental">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                                    <label class="hrzn-fm">Mot de passe</label>
+                                                </div>
+                                                <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                    <div class="nk-int-st">
+                                                        <input class="form-control input-lg" type="password" asp-for="Password" placeholder="Tapez votre mot de passe">
+                                                    </div>
+                                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-example-int form-horizental">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                                    <label class="hrzn-fm">confirmation</label>
+                                                </div>
+                                                <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                    <div class="nk-int-st">
+                                                        <input class="form-control input-lg" type="password" asp-for="PasswordConfirmation" placeholder="Confirmer votre mot de passe">
+                                                    </div>
+                                                    <span asp-validation-for="PasswordConfirmation" class="text-danger"></span>
+                                                    <span class="text-danger">@ViewData["samePasswordError"]</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-example-int form-horizental">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                                    <label class="hrzn-fm">Email</label>
+                                                </div>
+                                                <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                    <div class="nk-int-st">
+                                                        <input class="form-control input-lg" asp-for="Email" placeholder="Tapez votre email">
+                                                    </div>
+                                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                                    <span class="text-danger">@ViewData["errorEmail"]</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-example-int form-horizental">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                                    <label class="hrzn-fm">image</label>
+                                                </div>
+                                                <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                    <div class="nk-int-st">
+                                                        <input type="file" class="form-control" asp-for="file">
+                                                    </div>
+                                                    <span asp-validation-for="Image" class="text-danger"></span>
+                                                    <span class="text-danger">@ViewData["erorImage"]</span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form-example-int mg-t-15">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-7 col-sm-7 col-xs-12 dcenter">
+                                                <button class="btn btn-success notika-btn-success" type="submit">Ajouter</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section script
+    {
+    <script src="~/js/bootstrap-select/bootstrap-select.js"></script>
+    <script src="~/js/jquery.scrollUp.min.js"></script>
+  }

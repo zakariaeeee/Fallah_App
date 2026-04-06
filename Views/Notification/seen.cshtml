@@ -1,0 +1,51 @@
+﻿@section title{
+    <title>List des Notification</title>
+}
+
+<div class="data-table-area">
+    <div class="container">
+        <div class="row">
+
+
+            <div class="data-table-list">
+
+                <div class="table-responsive">
+                    <table id="data-table-basic" class="table table-striped">
+                        <h4>list des notification vu</h4>
+                        <thead>
+
+                            <tr>
+                                    <th>text français</th>
+                                    <th>text arabic</th>
+                                    <th>type</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var N in ViewBag.listNotifSeen)
+                                {
+                                <tr>
+                                     <td>@Html.Raw(N.Notification.TextFrancais)</td>
+                                    <td>@Html.Raw(N.Notification.TextArabe) </td>
+                                    <td>@Html.Raw(N.Notification.type)</td>
+
+                                </tr>
+                                }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>text français</th>
+                                <th>text arabic</th>
+                                <th>type</th>
+
+
+
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

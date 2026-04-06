@@ -1,0 +1,1653 @@
+﻿@section title{
+    <title>Home Page</title>
+}
+@model Fallah_App.Service.Meteo
+<head>
+        <script src="~/js/charts/Chart.js"></script>
+
+    <link rel="stylesheet" href="~/icons/css/weather-icons.min.css" />
+
+</head>
+
+    <div class="breadcomb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcomb-list">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="breadcomb-wp">
+                                    <div class="breadcomb-icon">
+                                        <i class="notika-icon notika-windows"></i>
+                                    </div>
+                                    <div class="breadcomb-ctn">
+                                        <h2>Meteo</h2>
+                                        <p>Les donnes des Meteo de la semaines</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="tabs-info-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="widget-tabs-int">
+                        <div class="widget-tabs-list">
+                            <ul class="nav nav-tabs">
+                               
+                                @for(int i=0;i<7;i++)
+                                {
+                                    @if(i==0){
+                                        <li class="active"><a data-toggle="tab" href="#@i">Aujourd'hui</a></li>
+                                    }else{
+                                    <li><a data-toggle="tab" href="#@i">@ViewBag.Culture.DateTimeFormat.GetDayName(Model.daily.time[i].DayOfWeek) @Model.daily.time[0].Day @ViewBag.Culture.DateTimeFormat.GetMonthName(Model.daily.time[0].Month) </a></li>
+                                    }
+                                }
+                            </ul>
+                            <div class="tab-content tab-custom-st">
+                                 @for(int i=0;i<7;i++)
+                                {
+                                    @if(i==0){
+                                       <div id="@i" class="tab-pane fade in active">
+                                            <div class="tab-ctn">
+                                                 <div class="visitor-sv-tm-area">
+        <div class="container " style="display:flex; justify-content:center">
+            <div class="row col-md-8 col-sm-6 ">  
+                <div class="panel panel-default" style="color: #4B515D; border-radius: 35px;">
+                    <div class="panel-body" style="padding:50px;">
+  
+                          <div class="row">
+                              <div class="col-xs-8">
+                            <h3  class="text-uppercase ">@ViewBag.Culture.DateTimeFormat.GetDayName(Model.daily.time[i].DayOfWeek)</h3>
+                            <h4  class="text-uppercase">@ViewBag.Culture.DateTimeFormat.GetMonthName(Model.daily.time[i].Month) @Model.daily.time[0].Day</h4>
+                            </div>
+                            <h4 class="col-xs-4 text-right">@Model.daily.time[0].Year</h4>
+                          </div>
+
+                       <div style="display:flex; justify-content:center ;margin-bottom:20px;">
+
+                          <div class=" text-center mt-5 mb-4">
+                             <span class="col-xs-12 text-muted">Temperature maximal</span>
+                            <h1 class="col-xs-12 mb-0 font-weight-bold" style="color: #1C2331;"> @Model.daily.temperature_2m_max[i] °C </h1>
+                          </div>
+                        <div class=" text-center mt-5 mb-4">
+                                <span class="col-xs-12 text-muted">Temperature minimal</span>
+                                <h1 class="col-xs-12 mb-0 font-weight-bold" style="color: #1C2331;"> @Model.daily.temperature_2m_min[i] °C </h1>
+                        </div>
+                    </div>
+                          <div class="row align-items-center">
+                            <div class="col-xs-6" style="font-size: 1.1rem;">
+                                <div><span style="font-size: 0.9rem; margin-right:10px;" class="text-muted">Lever du soleil:</span><i class="wi wi-sunrise"> </i>   @Model.daily.sunrise[i].ToString("H:mm") AM</div>
+                                <div><span style="font-size: 0.9rem; margin-right:10px;" class="text-muted">Coucher du soleil:</span><i class="wi wi-sunset"> </i>   @Model.daily.sunset[i].ToString("H:mm") AM</div>
+                                <div><span style="font-size: 0.9rem; margin-right:10px;" class="text-muted">UltartViolet:</span><i class="wi wi-sunrise"> </i>   @Model.daily.uv_index_max[i]</div>
+                                <div><span style="font-size: 0.9rem; margin-right:10px;" class="text-muted">UltartViolet Ciel clair:</span><i class="wi wi-sunrise"> </i>   @Model.daily.uv_index_clear_sky_max[i]</div>
+                                <div><span style="font-size: 0.9rem; margin-right:10px;" class="text-muted">Plui:</span><i class="wi wi-day-rain"> </i>   @Model.daily.rain_sum[i]  @Model.daily_units.rain_sum</div>
+                                <div>
+                                    <span style="font-size: 0.9rem; margin-right:10px;" class="text-muted">Neige:</span><i class="wi wi-day-snow-wind"> </i>   @Model.daily.snowfall_sum[i]  @Model.daily_units.snowfall_sum
+                                </div>
+                                <div><span style="font-size: 0.9rem; margin-right:10px;" class="text-muted">Vitesse du vent:</span><i class="wi wi-day-cloudy-windy"> </i>   @Model.daily.windspeed_10m_max[i]  @Model.daily_units.windspeed_10m_max</div>
+                                <div><span style="font-size: 0.9rem; margin-right:10px;" class="text-muted">Rafales du vent:</span><i class="wi wi-day-cloudy-gusts"> </i>   @Model.daily.windgusts_10m_max[i]  @Model.daily_units.windgusts_10m_max</div>
+                            </div>
+                            <div class="col-xs-6 text-center">
+
+                                <img src="~/Icons_weathercode/@ViewBag.icon[Model.daily.weathercode[i]]" class="img-responsive"/>
+                            </div>
+                          </div>
+  
+                    </div>
+          </div>
+  
+        </div>
+      </div>
+  
+    </div>
+                                                  <div class="visitor-sv-tm-area">
+    
+            <div class="row">
+             <!----------------------------------------------------------------------->  
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="visitor-sv-tm-int">
+<<<<<<< HEAD
+                        <div class="accordion-stn sm-res-mg-t-30">
+
+                            <div class="panel-group" data-collapse-color="nk-blue" id="accordionBlue_@i" role="tablist" aria-multiselectable="true">
+=======
+                       <div class="accordion-stn sm-res-mg-t-30">
+                                      
+                                    <div class="panel-group" data-collapse-color="nk-blue" id="accordionBlue" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-collapse notika-accrodion-cus">
+                                            <div class="panel-heading" role="tab">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordionBlue" href="#accordionBlue-one" aria-expanded="true">
+												        @Model.daily.time[1]
+                                                    
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="accordionBlue-one" class="collapse animated flipInX in" role="tabpanel">
+                                                <div class="panel-body">
+                                            <p id="chart3"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-collapse notika-accrodion-cus">
+                                            <div class="panel-heading" role="tab">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionBlue" href="#accordionBlue-two" aria-expanded="false">
+                                                @Model.daily.time[2]
+                                            </a>
+                                                </h4>
+                                            </div>
+                                            <div id="accordionBlue-two" class="collapse animated flipInX" role="tabpanel">
+                                                <div class="panel-body">
+                                            <p id="chart2"></p>
+                                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-collapse notika-accrodion-cus">
+                                            <div class="panel-heading" role="tab">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionBlue" href="#accordionBlue-three" aria-expanded="false">
+                                                @Model.daily.time[3]
+                                            </a>
+                                                </h4>
+                                            </div>
+                                            <div id="accordionBlue-three" class="collapse animated flipInX" role="tabpanel">
+                                                <div class="panel-body">
+                                            <p>swdsdcsc</p>
+                                        </div>
+                                            </div>
+                                        </div>
+>>>>>>> 0071b222752f206077bb5aeee835c2a5b544aecf
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-one" aria-expanded="true">
+                                                Temperature
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-one" class="collapse animated flipInX in" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="temp2mminuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="temp2mmidi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-two" aria-expanded="false">
+                                                Temperature en 80m
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-two" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="t80minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="t80midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-three" aria-expanded="false">
+                                                Temperature en 120m
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-three" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="t120minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="t120midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-four" aria-expanded="false">
+                                                Précipitation
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-four" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="pminuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="pmidi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-five" aria-expanded="false">
+                                                Plui
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-five" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="plminuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="plmidi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-six" aria-expanded="false">
+                                                Neige
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-six" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="nminuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="nmidi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-seven" aria-expanded="false">
+                                                couverture nuageuse
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-seven" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="cnminuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="cnmidi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-8" aria-expanded="false">
+                                                Vitesse de vent en 10m
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-8" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="vv10minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="vv10midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-9" aria-expanded="false">
+                                                Vitesse de vent en 80m
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-9" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="vv80minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="vv80midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-10" aria-expanded="false">
+                                                Vitesse de vent en 180m
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-10" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="vv180minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="vv180midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-11" aria-expanded="false">
+                                                Direction du vent en 10m
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-11" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="dv10minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="dv10midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-12" aria-expanded="false">
+                                                Direction du vent en 80m
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-12" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="dv80minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="dv80midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="visitor-sv-tm-int">
+                        <div class="accordion-stn sm-res-mg-t-30">
+
+                            <div class="panel-group" data-collapse-color="nk-blue" id="accordionBlue_1_@i" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-13" aria-expanded="false">
+                                                Rafales en 10m
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-13" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="r10minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="r10midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-15" aria-expanded="false">
+                                                Point de rosée
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-15" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="dpminuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="dpmidi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-16" aria-expanded="false">
+                                                Humidite
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-16" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hmminuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hmmidi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-17" aria-expanded="false">
+                                                Temperature du Sol en 0cm
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-17" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="ts0minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="ts0midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-18" aria-expanded="false">
+                                                Temperature du Sol en 6cm
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-18" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="ts6minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="ts6midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-19" aria-expanded="false">
+                                                Temperature du Sol en 18cm
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-19" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="ts18minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="ts18midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-20" aria-expanded="false">
+                                                Humidité du Sol entre 0 et 1 cm
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-20" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hs0minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hs0midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-21" aria-expanded="false">
+                                                Humidité du Sol entre 1 et 3 cm
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-21" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hs1minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hs1midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-22" aria-expanded="false">
+                                                Humidité du Sol entre 3 et 9 cm
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-22" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hs3minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hs3midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-23" aria-expanded="false">
+                                                Humidité du Sol entre 9 et 27 cm
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-23" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hs9minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hs9midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                                        </div>
+                                            </div>
+                                    }else{
+                                        <div id="@i" class="tab-pane fade">
+                                            <div class="tab-ctn">
+                                            <div class="visitor-sv-tm-area">
+        <div class="container " style="display:flex; justify-content:center">
+            <div class="row col-md-8 col-sm-6 ">  
+                <div class="panel panel-default" style="color: #4B515D; border-radius: 35px;">
+                    <div class="panel-body" style="padding:50px;">
+  
+                          <div class="row">
+                              <div class="col-xs-8">
+                            <h3  class="text-uppercase ">@ViewBag.Culture.DateTimeFormat.GetDayName(Model.daily.time[i].DayOfWeek)</h3>
+                            <h4  class="text-uppercase">@ViewBag.Culture.DateTimeFormat.GetMonthName(Model.daily.time[i].Month) @Model.daily.time[0].Day</h4>
+                            </div>
+                            <h4 class="col-xs-4 text-right">@Model.daily.time[0].Year</h4>
+                          </div>
+
+                       <div style="display:flex; justify-content:center ;margin-bottom:20px;">
+
+                          <div class=" text-center mt-5 mb-4">
+                             <span class="col-xs-12 text-muted">Temperature maximal</span>
+                            <h1 class="col-xs-12 mb-0 font-weight-bold" style="color: #1C2331;"> @Model.daily.temperature_2m_max[i] °C </h1>
+                          </div>
+                        <div class=" text-center mt-5 mb-4">
+                                <span class="col-xs-12 text-muted">Temperature minimal</span>
+                                <h1 class="col-xs-12 mb-0 font-weight-bold" style="color: #1C2331;"> @Model.daily.temperature_2m_min[i] °C </h1>
+                        </div>
+                    </div>
+                          <div class="row align-items-center">
+                            <div class="col-xs-6" style="font-size: 1.1rem;">
+                                <div><span style="font-size: 0.9rem; margin-right:10px;" class="text-muted">Lever du soleil:</span><i class="wi wi-sunrise"> </i>   @Model.daily.sunrise[i].ToString("H:mm") AM</div>
+                                <div><span style="font-size: 0.9rem; margin-right:10px;" class="text-muted">Coucher du soleil:</span><i class="wi wi-sunset"> </i>   @Model.daily.sunset[i].ToString("H:mm") AM</div>
+                                <div><span style="font-size: 0.9rem; margin-right:10px;" class="text-muted">UltartViolet:</span><i class="wi wi-sunrise"> </i>   @Model.daily.uv_index_max[i]</div>
+                                <div><span style="font-size: 0.9rem; margin-right:10px;" class="text-muted">UltartViolet Ciel clair:</span><i class="wi wi-sunrise"> </i>   @Model.daily.uv_index_clear_sky_max[i]</div>
+                                <div><span style="font-size: 0.9rem; margin-right:10px;" class="text-muted">Plui:</span><i class="wi wi-day-rain"> </i>   @Model.daily.rain_sum[i]  @Model.daily_units.rain_sum</div>
+                                <div>
+                                    <span style="font-size: 0.9rem; margin-right:10px;" class="text-muted">Neige:</span><i class="wi wi-day-snow-wind"> </i>   @Model.daily.snowfall_sum[i]  @Model.daily_units.snowfall_sum
+                                </div>
+                                <div><span style="font-size: 0.9rem; margin-right:10px;" class="text-muted">Vitesse du vent:</span><i class="wi wi-day-cloudy-windy"> </i>   @Model.daily.windspeed_10m_max[i]  @Model.daily_units.windspeed_10m_max</div>
+                                <div><span style="font-size: 0.9rem; margin-right:10px;" class="text-muted">Rafales du vent:</span><i class="wi wi-day-cloudy-gusts"> </i>   @Model.daily.windgusts_10m_max[i]  @Model.daily_units.windgusts_10m_max</div>
+                            </div>
+                             <div class="col-xs-6 text-center">
+                                <img src="~/Icons_weathercode/@ViewBag.icon[Model.daily.weathercode[i]]" class="img-responsive"/>
+                            </div>
+                          </div>
+  
+                    </div>
+          </div>
+  
+        </div>
+      </div>
+  
+    </div>
+                                                  <div class="visitor-sv-tm-area">
+    
+            <div class="row">
+             <!----------------------------------------------------------------------->  
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="visitor-sv-tm-int">
+                        <div class="accordion-stn sm-res-mg-t-30">
+
+                            <div class="panel-group" data-collapse-color="nk-blue" id="accordionBlue_@i" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-one" aria-expanded="true">
+                                                Temperature
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-one" class="collapse animated flipInX in" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="temp2mminuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="temp2mmidi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-two" aria-expanded="false">
+                                                Temperature en 80m
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-two" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="t80minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="t80midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-three" aria-expanded="false">
+                                                Temperature en 120m
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-three" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="t120minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="t120midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-four" aria-expanded="false">
+                                                Précipitation
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-four" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="pminuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="pmidi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-five" aria-expanded="false">
+                                                Plui
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-five" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="plminuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="plmidi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-17" aria-expanded="false">
+                                                Neige
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-17" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="nminuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="nmidi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-seven" aria-expanded="false">
+                                                couverture nuageuse
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-seven" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="cnminuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="cnmidi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-8" aria-expanded="false">
+                                                Vitesse de vent en 10m
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-8" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="vv10minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="vv10midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-9" aria-expanded="false">
+                                                Vitesse de vent en 80m
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-9" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="vv80minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="vv80midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-10" aria-expanded="false">
+                                                Vitesse de vent en 180m
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-10" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="vv180minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="vv180midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-11" aria-expanded="false">
+                                                Direction du vent en 10m
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-11" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="dv10minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="dv10midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_@i" href="#accordionBlue_@i-12" aria-expanded="false">
+                                                Direction du vent en 80m
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_@i-12" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="dv80minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="dv80midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="visitor-sv-tm-int">
+                        <div class="accordion-stn sm-res-mg-t-30">
+
+                            <div class="panel-group" data-collapse-color="nk-blue" id="accordionBlue_1_@i" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-13" aria-expanded="false">
+                                                Rafales en 10m
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-13" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="r10minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="r10midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-15" aria-expanded="false">
+                                                Point de rosée
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-15" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="dpminuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="dpmidi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-16" aria-expanded="false">
+                                                Humidite
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-16" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hmminuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                                                    <canvas height="140vh" width="180vw" id="hmmidi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-17" aria-expanded="false">
+                                                Temperature du Sol en 0cm
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-17" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="ts0minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="ts0midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-18" aria-expanded="false">
+                                                Temperature du Sol en 6cm
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-18" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="ts6minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="ts6midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-19" aria-expanded="false">
+                                                Temperature du Sol en 18cm
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-19" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="ts18minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="ts18midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-20" aria-expanded="false">
+                                                Humidité du Sol entre 0 et 1 cm
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-20" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hs0minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hs0midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-21" aria-expanded="false">
+                                                Humidité du Sol entre 1 et 3 cm
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-21" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hs1minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hs1midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-22" aria-expanded="false">
+                                                Humidité du Sol entre 3 et 9 cm
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-22" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hs3minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hs3midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-collapse notika-accrodion-cus">
+                                    <div class="panel-heading" role="tab">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="accordionBlue_1_@i" href="#accordionBlue_1_@i-23" aria-expanded="false">
+                                                Humidité du Sol entre 9 et 27 cm
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="accordionBlue_1_@i-23" class="collapse animated flipInX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hs9minuit+@i"></canvas>
+                                            </div>
+                                            <div class="visitor-sv-tm-int sm-res-mg-t-30">
+                                                <canvas height="140vh" width="180vw" id="hs9midi+@i"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+   
+    <script>
+         
+        function chart(chartId, chartData,chartTime,date_,unit) {
+            var ctx = document.getElementById(chartId);
+            var areachartfalse = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: chartTime,
+                    datasets: [{
+                        label: "Unité: "+unit,
+                        fill: false,
+                        backgroundColor: '#00c292',
+                        borderColor: '#00c292',
+                        data: chartData
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    spanGaps: false,
+                    title: {
+                        display: true,
+                        text: date_
+                    },
+                    elements: {
+                        line: {
+                            tension: 0.000001
+                        }
+                    },
+                    plugins: {
+                        filler: {
+                            propagate: false
+                        }
+                    },
+                    scales: {
+                        xAxes: [{
+                            ticks: {
+                                autoSkip: false,
+                                maxRotation: 0
+                            }
+                        }]
+                    }
+                }
+            });
+        }
+
+        //-----------------temerature_2m
+        chart("temp2mminuit+0", @Json.Serialize(Model.hourly.temperature_2m.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Temperature par heure du Minuit", @Json.Serialize(@Model.hourly_units.temperature_2m));
+        chart("temp2mmidi+0", @Json.Serialize(Model.hourly.temperature_2m.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Temperature par heure du Midi", @Json.Serialize(@Model.hourly_units.temperature_2m));
+
+        chart("temp2mminuit+1", @Json.Serialize(Model.hourly.temperature_2m.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Temperature par heure du Minuit", @Json.Serialize(@Model.hourly_units.temperature_2m));
+        chart("temp2mmidi+1", @Json.Serialize(Model.hourly.temperature_2m.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Temperature par heure du Midi", @Json.Serialize(@Model.hourly_units.temperature_2m));
+
+        chart("temp2mminuit+2", @Json.Serialize(Model.hourly.temperature_2m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Temperature par heure du Minuit", @Json.Serialize(@Model.hourly_units.temperature_2m));
+        chart("temp2mmidi+2", @Json.Serialize(Model.hourly.temperature_2m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Temperature par heure du Midi", @Json.Serialize(@Model.hourly_units.temperature_2m));
+
+        chart("temp2mminuit+3", @Json.Serialize(Model.hourly.temperature_2m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Temperature par heure du Minuit", @Json.Serialize(@Model.hourly_units.temperature_2m));
+        chart("temp2mmidi+3", @Json.Serialize(Model.hourly.temperature_2m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Temperature par heure du Midi", @Json.Serialize(@Model.hourly_units.temperature_2m));
+
+        chart("temp2mminuit+4", @Json.Serialize(Model.hourly.temperature_2m.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Temperature par heure du Minuit", @Json.Serialize(@Model.hourly_units.temperature_2m));
+        chart("temp2mmidi+4", @Json.Serialize(Model.hourly.temperature_2m.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Temperature par heure du Midi", @Json.Serialize(@Model.hourly_units.temperature_2m));
+
+        chart("temp2mminuit+5", @Json.Serialize(Model.hourly.temperature_2m.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Temperature par heure du Minuit", @Json.Serialize(@Model.hourly_units.temperature_2m));;
+        chart("temp2mmidi+5", @Json.Serialize(Model.hourly.temperature_2m.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Temperature par heure du Midi", @Json.Serialize(@Model.hourly_units.temperature_2m));
+
+        chart("temp2mminuit+6", @Json.Serialize(Model.hourly.temperature_2m.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Temperature par heure du Minuit", @Json.Serialize(@Model.hourly_units.temperature_2m));
+        chart("temp2mmidi+6", @Json.Serialize(Model.hourly.temperature_2m.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Temperature par heure du Midi", @Json.Serialize(@Model.hourly_units.temperature_2m));
+
+
+        //-----------------relativehumidity_2m
+        chart("hmminuit+0", @Json.Serialize(Model.hourly.relativehumidity_2m.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Humidité par heure du Minuit", @Json.Serialize(Model.hourly_units.relativehumidity_2m));
+        chart("hmmidi+0", @Json.Serialize(Model.hourly.relativehumidity_2m.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Humidité par heure du Midi", @Json.Serialize(Model.hourly_units.relativehumidity_2m));
+
+        chart("hmminuit+1", @Json.Serialize(Model.hourly.relativehumidity_2m.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Humidité par heure du Minuit", @Json.Serialize(Model.hourly_units.relativehumidity_2m));
+        chart("hmmidi+1", @Json.Serialize(Model.hourly.relativehumidity_2m.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Humidité par heure du Midi", @Json.Serialize(Model.hourly_units.relativehumidity_2m));
+
+        chart("hmminuit+2", @Json.Serialize(Model.hourly.relativehumidity_2m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Humidité par heure du Minuit", @Json.Serialize(Model.hourly_units.relativehumidity_2m));
+        chart("hmmidi+2", @Json.Serialize(Model.hourly.relativehumidity_2m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Humidité par heure du Midi", @Json.Serialize(Model.hourly_units.relativehumidity_2m));
+
+        chart("hmminuit+3", @Json.Serialize(Model.hourly.relativehumidity_2m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Humidité par heure du Minuit", @Json.Serialize(Model.hourly_units.relativehumidity_2m));
+        chart("hmmidi+3", @Json.Serialize(Model.hourly.relativehumidity_2m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Humidité par heure du Midi", @Json.Serialize(Model.hourly_units.relativehumidity_2m));
+
+        chart("hmminuit+4", @Json.Serialize(Model.hourly.relativehumidity_2m.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Humidité par heure du Minuit", @Json.Serialize(Model.hourly_units.relativehumidity_2m));
+        chart("hmmidi+4", @Json.Serialize(Model.hourly.relativehumidity_2m.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Humidité par heure du Midi", @Json.Serialize(Model.hourly_units.relativehumidity_2m));
+
+        chart("hmminuit+5", @Json.Serialize(Model.hourly.relativehumidity_2m.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Humidité par heure du Minuit", @Json.Serialize(Model.hourly_units.relativehumidity_2m));
+        chart("hmmidi+5", @Json.Serialize(Model.hourly.relativehumidity_2m.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Humidité par heure du Midi", @Json.Serialize(Model.hourly_units.relativehumidity_2m));
+
+        chart("hmminuit+6", @Json.Serialize(Model.hourly.relativehumidity_2m.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Humidité par heure du Minuit", @Json.Serialize(Model.hourly_units.relativehumidity_2m));
+        chart("hmmidi+6", @Json.Serialize(Model.hourly.relativehumidity_2m.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Humidité par heure du Midi", @Json.Serialize(Model.hourly_units.relativehumidity_2m));
+
+        //-----------------point de rosée
+        chart("dpminuit+0", @Json.Serialize(Model.hourly.dewpoint_2m.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Point de rosée par heure du Minuit", @Json.Serialize(Model.hourly_units.dewpoint_2m));
+        chart("dpmidi+0", @Json.Serialize(Model.hourly.dewpoint_2m.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Point de rosée par heure du Midi", @Json.Serialize(Model.hourly_units.dewpoint_2m));
+
+        chart("dpminuit+1", @Json.Serialize(Model.hourly.dewpoint_2m.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Point de rosée par heure du Minuit", @Json.Serialize(Model.hourly_units.dewpoint_2m));
+        chart("dpmidi+1", @Json.Serialize(Model.hourly.dewpoint_2m.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Point de rosée par heure du Midi", @Json.Serialize(Model.hourly_units.dewpoint_2m));
+
+        chart("dpminuit+2", @Json.Serialize(Model.hourly.dewpoint_2m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Point de rosée par heure du Minuit", @Json.Serialize(Model.hourly_units.dewpoint_2m));
+        chart("dpmidi+2", @Json.Serialize(Model.hourly.dewpoint_2m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Point de rosée par heure du Midi", @Json.Serialize(Model.hourly_units.dewpoint_2m));
+
+        chart("dpminuit+3", @Json.Serialize(Model.hourly.dewpoint_2m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Point de rosée par heure du Minuit", @Json.Serialize(Model.hourly_units.dewpoint_2m));
+        chart("dpmidi+3", @Json.Serialize(Model.hourly.dewpoint_2m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Point de rosée par heure du Midi", @Json.Serialize(Model.hourly_units.dewpoint_2m));
+
+        chart("dpminuit+4", @Json.Serialize(Model.hourly.dewpoint_2m.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Point de rosée par heure du Minuit", @Json.Serialize(Model.hourly_units.dewpoint_2m));
+        chart("dpmidi+4", @Json.Serialize(Model.hourly.dewpoint_2m.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Point de rosée par heure du Midi", @Json.Serialize(Model.hourly_units.dewpoint_2m));
+
+        chart("dpminuit+5", @Json.Serialize(Model.hourly.dewpoint_2m.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Point de rosée par heure du Minuit", @Json.Serialize(Model.hourly_units.dewpoint_2m));
+        chart("dpmidi+5", @Json.Serialize(Model.hourly.dewpoint_2m.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Point de rosée par heure du Midi", @Json.Serialize(Model.hourly_units.dewpoint_2m));
+
+        chart("dpminuit+6", @Json.Serialize(Model.hourly.dewpoint_2m.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Point de rosée par heure du Minuit", @Json.Serialize(Model.hourly_units.dewpoint_2m));
+        chart("dpmidi+6", @Json.Serialize(Model.hourly.dewpoint_2m.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Point de rosée par heure du Midi", @Json.Serialize(Model.hourly_units.dewpoint_2m));
+
+        //-----------------temperature en 80 m
+        chart("t80minuit+0", @Json.Serialize(Model.hourly.temperature_80m.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.temperature_80m));
+        chart("t80midi+0", @Json.Serialize(Model.hourly.temperature_80m.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.temperature_80m));
+
+        chart("t80minuit+1", @Json.Serialize(Model.hourly.temperature_80m.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.temperature_80m));
+        chart("t80midi+1", @Json.Serialize(Model.hourly.temperature_80m.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.temperature_80m));
+
+        chart("t80minuit+2", @Json.Serialize(Model.hourly.temperature_80m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.temperature_80m));
+        chart("t80midi+2", @Json.Serialize(Model.hourly.temperature_80m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.temperature_80m));
+
+        chart("t80minuit+3", @Json.Serialize(Model.hourly.temperature_80m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.temperature_80m));
+        chart("t80midi+3", @Json.Serialize(Model.hourly.temperature_80m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.temperature_80m));
+
+        chart("t80minuit+4", @Json.Serialize(Model.hourly.temperature_80m.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.temperature_80m));
+        chart("t80midi+4", @Json.Serialize(Model.hourly.temperature_80m.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.temperature_80m));
+
+        chart("t80minuit+5", @Json.Serialize(Model.hourly.temperature_80m.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.temperature_80m));
+        chart("t80midi+5", @Json.Serialize(Model.hourly.temperature_80m.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.temperature_80m));
+
+        chart("t80minuit+6", @Json.Serialize(Model.hourly.temperature_80m.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.temperature_80m));
+        chart("t80midi+6", @Json.Serialize(Model.hourly.temperature_80m.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.temperature_80m));
+
+        //-----------------temperature en 120 m
+        chart("t120minuit+0", @Json.Serialize(Model.hourly.temperature_120m.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 120m par heure du Minuit", @Json.Serialize(Model.hourly_units.temperature_120m));
+        chart("t120midi+0", @Json.Serialize(Model.hourly.temperature_120m.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 120m par heure du Midi", @Json.Serialize(Model.hourly_units.temperature_120m));
+
+        chart("t120minuit+1", @Json.Serialize(Model.hourly.temperature_120m.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 120m par heure du Minuit", @Json.Serialize(Model.hourly_units.temperature_120m));
+        chart("t120midi+1", @Json.Serialize(Model.hourly.temperature_120m.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 120m par heure du Midi", @Json.Serialize(Model.hourly_units.temperature_120m));
+
+        chart("t120minuit+2", @Json.Serialize(Model.hourly.temperature_120m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 120m par heure du Minuit", @Json.Serialize(Model.hourly_units.temperature_120m));
+        chart("t120midi+2", @Json.Serialize(Model.hourly.temperature_120m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 120m par heure du Midi", @Json.Serialize(Model.hourly_units.temperature_120m));
+
+        chart("t120minuit+3", @Json.Serialize(Model.hourly.temperature_120m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 120m par heure du Minuit", @Json.Serialize(Model.hourly_units.temperature_120m));
+        chart("t120midi+3", @Json.Serialize(Model.hourly.temperature_120m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 120m par heure du Midi", @Json.Serialize(Model.hourly_units.temperature_120m));
+
+        chart("t120minuit+4", @Json.Serialize(Model.hourly.temperature_120m.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 120m par heure du Minuit", @Json.Serialize(Model.hourly_units.temperature_120m));
+        chart("t120midi+4", @Json.Serialize(Model.hourly.temperature_120m.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 120m par heure du Midi", @Json.Serialize(Model.hourly_units.temperature_120m));
+
+        chart("t120minuit+5", @Json.Serialize(Model.hourly.temperature_120m.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 120m par heure du Minuit", @Json.Serialize(Model.hourly_units.temperature_120m));
+        chart("t120midi+5", @Json.Serialize(Model.hourly.temperature_120m.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 120m par heure du Midi", @Json.Serialize(Model.hourly_units.temperature_120m));
+
+        chart("t120minuit+6", @Json.Serialize(Model.hourly.temperature_120m.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 120m par heure du Minuit", @Json.Serialize(Model.hourly_units.temperature_120m));
+        chart("t120midi+6", @Json.Serialize(Model.hourly.temperature_120m.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Temperature en 120m par heure du Midi", @Json.Serialize(Model.hourly_units.temperature_120m));
+
+        //-----------------Précipitation
+        chart("pminuit+0", @Json.Serialize(Model.hourly.precipitation_probability.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Précipitation par heure du Minuit", @Json.Serialize(Model.hourly_units.precipitation_probability));
+        chart("pmidi+0", @Json.Serialize(Model.hourly.precipitation_probability.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Précipitation par heure du Midi", @Json.Serialize(Model.hourly_units.precipitation_probability));
+
+        chart("pminuit+1", @Json.Serialize(Model.hourly.precipitation_probability.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Précipitation par heure du Minuit", @Json.Serialize(Model.hourly_units.precipitation_probability));
+        chart("pmidi+1", @Json.Serialize(Model.hourly.precipitation_probability.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Précipitation par heure du Midi", @Json.Serialize(Model.hourly_units.precipitation_probability));
+
+        chart("pminuit+2", @Json.Serialize(Model.hourly.precipitation_probability.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Précipitation par heure du Minuit", @Json.Serialize(Model.hourly_units.precipitation_probability));
+        chart("pmidi+2", @Json.Serialize(Model.hourly.precipitation_probability.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Précipitation par heure du Midi", @Json.Serialize(Model.hourly_units.precipitation_probability));
+
+        chart("pminuit+3", @Json.Serialize(Model.hourly.precipitation_probability.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Précipitation par heure du Minuit", @Json.Serialize(Model.hourly_units.precipitation_probability));
+        chart("pmidi+3", @Json.Serialize(Model.hourly.precipitation_probability.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Précipitation par heure du Midi", @Json.Serialize(Model.hourly_units.precipitation_probability));
+
+        chart("pminuit+4", @Json.Serialize(Model.hourly.precipitation_probability.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Précipitation par heure du Minuit", @Json.Serialize(Model.hourly_units.precipitation_probability));
+        chart("pmidi+4", @Json.Serialize(Model.hourly.precipitation_probability.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Précipitation par heure du Midi", @Json.Serialize(Model.hourly_units.precipitation_probability));
+
+        chart("pminuit+5", @Json.Serialize(Model.hourly.precipitation_probability.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Précipitation par heure du Minuit", @Json.Serialize(Model.hourly_units.precipitation_probability));
+        chart("pmidi+5", @Json.Serialize(Model.hourly.precipitation_probability.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Précipitation par heure du Midi", @Json.Serialize(Model.hourly_units.precipitation_probability));
+
+        chart("pminuit+6", @Json.Serialize(Model.hourly.precipitation_probability.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Précipitation par heure du Minuit", @Json.Serialize(Model.hourly_units.precipitation_probability));
+        chart("pmidi+6", @Json.Serialize(Model.hourly.precipitation_probability.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Précipitation par heure du Midi", @Json.Serialize(Model.hourly_units.precipitation_probability));
+
+        //-----------------plui
+        chart("plminuit+0", @Json.Serialize(Model.hourly.rain.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Plui par heure du Minuit", @Json.Serialize(Model.hourly_units.rain));
+        chart("plmidi+0", @Json.Serialize(Model.hourly.rain.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Plui par heure du Midi", @Json.Serialize(Model.hourly_units.rain));
+
+        chart("plminuit+1", @Json.Serialize(Model.hourly.rain.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Plui par heure du Minuit", @Json.Serialize(Model.hourly_units.rain));
+        chart("plmidi+1", @Json.Serialize(Model.hourly.rain.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Plui par heure du Midi", @Json.Serialize(Model.hourly_units.rain));
+
+        chart("plminuit+2", @Json.Serialize(Model.hourly.rain.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Plui par heure du Minuit", @Json.Serialize(Model.hourly_units.rain));
+        chart("plmidi+2", @Json.Serialize(Model.hourly.rain.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Plui par heure du Midi", @Json.Serialize(Model.hourly_units.rain));
+
+        chart("plminuit+3", @Json.Serialize(Model.hourly.rain.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Plui par heure du Minuit", @Json.Serialize(Model.hourly_units.rain));
+        chart("plmidi+3", @Json.Serialize(Model.hourly.rain.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Plui par heure du Midi", @Json.Serialize(Model.hourly_units.rain));
+
+        chart("plminuit+4", @Json.Serialize(Model.hourly.rain.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Plui par heure du Minuit", @Json.Serialize(Model.hourly_units.rain));
+        chart("plmidi+4", @Json.Serialize(Model.hourly.rain.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Plui par heure du Midi", @Json.Serialize(Model.hourly_units.rain));
+
+        chart("plminuit+5", @Json.Serialize(Model.hourly.rain.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Plui par heure du Minuit", @Json.Serialize(Model.hourly_units.rain));
+        chart("plmidi+5", @Json.Serialize(Model.hourly.rain.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Plui par heure du Midi", @Json.Serialize(Model.hourly_units.rain));
+
+        chart("plminuit+6", @Json.Serialize(Model.hourly.rain.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Plui par heure du Minuit", @Json.Serialize(Model.hourly_units.rain));
+        chart("plmidi+6", @Json.Serialize(Model.hourly.rain.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Plui par heure du Midi", @Json.Serialize(Model.hourly_units.rain));
+
+        
+        //-----------------couverture nuageuse
+        chart("cnminuit+0", @Json.Serialize(Model.hourly.cloudcover.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "couverture nuageuse par heure du Minuit", @Json.Serialize(Model.hourly_units.cloudcover));
+        chart("cnmidi+0", @Json.Serialize(Model.hourly.cloudcover.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "couverture nuageuse par heure du Midi", @Json.Serialize(Model.hourly_units.cloudcover));
+
+        chart("cnminuit+1", @Json.Serialize(Model.hourly.cloudcover.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "couverture nuageuse par heure du Minuit", @Json.Serialize(Model.hourly_units.cloudcover));
+        chart("cnmidi+1", @Json.Serialize(Model.hourly.cloudcover.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "couverture nuageuse par heure du Midi", @Json.Serialize(Model.hourly_units.cloudcover));
+
+        chart("cnminuit+2", @Json.Serialize(Model.hourly.cloudcover.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "couverture nuageuse par heure du Minuit", @Json.Serialize(Model.hourly_units.cloudcover));
+        chart("cnmidi+2", @Json.Serialize(Model.hourly.cloudcover.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "couverture nuageuse par heure du Midi", @Json.Serialize(Model.hourly_units.cloudcover));
+
+        chart("cnminuit+3", @Json.Serialize(Model.hourly.cloudcover.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "couverture nuageuse par heure du Minuit", @Json.Serialize(Model.hourly_units.cloudcover));
+        chart("cnmidi+3", @Json.Serialize(Model.hourly.cloudcover.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "couverture nuageuse par heure du Midi", @Json.Serialize(Model.hourly_units.cloudcover));
+
+        chart("cnminuit+4", @Json.Serialize(Model.hourly.cloudcover.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "couverture nuageuse par heure du Minuit", @Json.Serialize(Model.hourly_units.cloudcover));
+        chart("cnmidi+4", @Json.Serialize(Model.hourly.cloudcover.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "couverture nuageuse par heure du Midi", @Json.Serialize(Model.hourly_units.cloudcover));
+
+        chart("cnminuit+5", @Json.Serialize(Model.hourly.cloudcover.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "couverture nuageuse par heure du Minuit", @Json.Serialize(Model.hourly_units.cloudcover));
+        chart("cnmidi+5", @Json.Serialize(Model.hourly.cloudcover.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "couverture nuageuse par heure du Midi", @Json.Serialize(Model.hourly_units.cloudcover));
+
+        chart("cnminuit+6", @Json.Serialize(Model.hourly.cloudcover.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "couverture nuageuse par heure du Minuit", @Json.Serialize(Model.hourly_units.cloudcover));
+        chart("cnmidi+6", @Json.Serialize(Model.hourly.cloudcover.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "couverture nuageuse par heure du Midi", @Json.Serialize(Model.hourly_units.cloudcover));
+
+        //-----------------Vitesse de vent en 10m
+        chart("vv10minuit+0", @Json.Serialize(Model.hourly.winddirection_80m.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_10m));
+        chart("vv10midi+0", @Json.Serialize(Model.hourly.windspeed_10m.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_10m));
+
+        chart("vv10minuit+1", @Json.Serialize(Model.hourly.windspeed_10m.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_10m));
+        chart("vv10midi+1", @Json.Serialize(Model.hourly.windspeed_10m.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_10m));
+
+        chart("vv10minuit+2", @Json.Serialize(Model.hourly.windspeed_10m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_10m));
+        chart("vv10midi+2", @Json.Serialize(Model.hourly.windspeed_10m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_10m));
+
+        chart("vv10minuit+3", @Json.Serialize(Model.hourly.windspeed_10m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_10m));
+        chart("vv10midi+3", @Json.Serialize(Model.hourly.windspeed_10m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_10m));
+
+        chart("vv10minuit+4", @Json.Serialize(Model.hourly.windspeed_10m.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_10m));
+        chart("vv10midi+4", @Json.Serialize(Model.hourly.windspeed_10m.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_10m));
+
+        chart("vv10minuit+5", @Json.Serialize(Model.hourly.windspeed_10m.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_10m));
+        chart("vv10midi+5", @Json.Serialize(Model.hourly.windspeed_10m.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_10m));
+
+        chart("vv10minuit+6", @Json.Serialize(Model.hourly.windspeed_10m.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_10m));
+        chart("vv10midi+6", @Json.Serialize(Model.hourly.windspeed_10m.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_10m));
+
+         //-----------------Vitesse de vent en 80m
+        chart("vv80minuit+0", @Json.Serialize(Model.hourly.windspeed_80m.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.winddirection_10m));
+        chart("vv80midi+0", @Json.Serialize(Model.hourly.windspeed_80m.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_80m));
+
+        chart("vv80minuit+1", @Json.Serialize(Model.hourly.windspeed_80m.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_80m));
+        chart("vv80midi+1", @Json.Serialize(Model.hourly.windspeed_80m.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_80m));
+
+        chart("vv80minuit+2", @Json.Serialize(Model.hourly.windspeed_80m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_80m));
+        chart("vv80midi+2", @Json.Serialize(Model.hourly.windspeed_80m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_80m));
+
+        chart("vv80minuit+3", @Json.Serialize(Model.hourly.windspeed_80m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_80m));
+        chart("vv80midi+3", @Json.Serialize(Model.hourly.windspeed_80m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_80m));
+
+        chart("vv80minuit+4", @Json.Serialize(Model.hourly.windspeed_80m.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_80m));
+        chart("vv80midi+4", @Json.Serialize(Model.hourly.windspeed_80m.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_80m));
+
+        chart("vv80minuit+5", @Json.Serialize(Model.hourly.windspeed_80m.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_80m));
+        chart("vv80midi+5", @Json.Serialize(Model.hourly.windspeed_80m.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_80m));
+
+        chart("vv80minuit+6", @Json.Serialize(Model.hourly.windspeed_80m.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_80m));
+        chart("vv80midi+6", @Json.Serialize(Model.hourly.windspeed_80m.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_80m));
+
+
+//-----------------Neige
+        chart("nminuit+0", @Json.Serialize(Model.hourly.snowfall.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "chute de neige par heure du Minuit", @Json.Serialize(Model.hourly_units.snowfall));
+        chart("nmidi+0", @Json.Serialize(Model.hourly.snowfall.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "chute de neige par heure du Midi", @Json.Serialize(Model.hourly_units.snowfall));
+
+        chart("nminuit+1", @Json.Serialize(Model.hourly.snowfall.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "chute de neige par heure du Minuit", @Json.Serialize(Model.hourly_units.snowfall));
+        chart("nmidi+1", @Json.Serialize(Model.hourly.snowfall.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "chute de neige par heure du Midi", @Json.Serialize(Model.hourly_units.snowfall));
+
+        chart("nminuit+2", @Json.Serialize(Model.hourly.snowfall.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "chute de neige par heure du Minuit", @Json.Serialize(Model.hourly_units.snowfall));
+        chart("nmidi+2", @Json.Serialize(Model.hourly.snowfall.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "chute de neige par heure du Midi", @Json.Serialize(Model.hourly_units.snowfall));
+
+        chart("nminuit+3", @Json.Serialize(Model.hourly.snowfall.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "chute de neige par heure du Minuit", @Json.Serialize(Model.hourly_units.snowfall));
+        chart("nmidi+3", @Json.Serialize(Model.hourly.snowfall.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "chute de neige par heure du Midi", @Json.Serialize(Model.hourly_units.snowfall));
+
+        chart("nminuit+4", @Json.Serialize(Model.hourly.snowfall.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "chute de neige par heure du Minuit", @Json.Serialize(Model.hourly_units.snowfall));
+        chart("nmidi+4", @Json.Serialize(Model.hourly.snowfall.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "chute de neige par heure du Midi", @Json.Serialize(Model.hourly_units.snowfall));
+
+        chart("nminuit+5", @Json.Serialize(Model.hourly.snowfall.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "chute de neige par heure du Minuit", @Json.Serialize(Model.hourly_units.snowfall));
+        chart("nmidi+5", @Json.Serialize(Model.hourly.snowfall.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "chute de neige par heure du Midi", @Json.Serialize(Model.hourly_units.snowfall));
+
+        chart("nminuit+6", @Json.Serialize(Model.hourly.snowfall.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "chute de neige par heure du Minuit", @Json.Serialize(Model.hourly_units.snowfall));
+        chart("nmidi+6", @Json.Serialize(Model.hourly.snowfall.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "chute de neige par heure du Midi", @Json.Serialize(Model.hourly_units.snowfall));
+
+
+        //-----------------Vitesse de vent en 180m
+        chart("vv180minuit+0", @Json.Serialize(Model.hourly.windspeed_180m.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 180m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_180m));
+        chart("vv180midi+0", @Json.Serialize(Model.hourly.windspeed_180m.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 180m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_180m));
+
+        chart("vv180minuit+1", @Json.Serialize(Model.hourly.windspeed_180m.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 180m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_180m));
+        chart("vv180midi+1", @Json.Serialize(Model.hourly.windspeed_180m.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 180m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_180m));
+
+        chart("vv180minuit+2", @Json.Serialize(Model.hourly.windspeed_180m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 180m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_180m));
+        chart("vv180midi+2", @Json.Serialize(Model.hourly.windspeed_180m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 180m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_180m));
+
+        chart("vv180minuit+3", @Json.Serialize(Model.hourly.windspeed_180m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 180m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_180m));
+        chart("vv180midi+3", @Json.Serialize(Model.hourly.windspeed_180m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 180m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_180m));
+
+        chart("vv180minuit+4", @Json.Serialize(Model.hourly.windspeed_180m.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 180m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_180m));
+        chart("vv180midi+4", @Json.Serialize(Model.hourly.windspeed_180m.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 180m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_180m));
+
+        chart("vv180minuit+5", @Json.Serialize(Model.hourly.windspeed_180m.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 180m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_180m));
+        chart("vv180midi+5", @Json.Serialize(Model.hourly.windspeed_180m.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 180m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_180m));
+
+        chart("vv180minuit+6", @Json.Serialize(Model.hourly.windspeed_180m.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 180m par heure du Minuit", @Json.Serialize(Model.hourly_units.windspeed_180m));
+        chart("vv180midi+6", @Json.Serialize(Model.hourly.windspeed_180m.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Vitesse de vent en 180m par heure du Midi", @Json.Serialize(Model.hourly_units.windspeed_180m));
+
+    //-----------------Direction du vent en 10m
+        chart("dv10minuit+0", @Json.Serialize(Model.hourly.winddirection_10m.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.winddirection_10m));
+        chart("dv10midi+0", @Json.Serialize(Model.hourly.winddirection_10m.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.winddirection_10m));
+
+        chart("dv10minuit+1", @Json.Serialize(Model.hourly.winddirection_10m.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.winddirection_10m));
+        chart("dv10midi+1", @Json.Serialize(Model.hourly.winddirection_10m.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.winddirection_10m));
+
+        chart("dv10minuit+2", @Json.Serialize(Model.hourly.winddirection_10m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.winddirection_10m));
+        chart("dv10midi+2", @Json.Serialize(Model.hourly.winddirection_10m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.winddirection_10m));
+
+        chart("dv10minuit+3", @Json.Serialize(Model.hourly.winddirection_10m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.winddirection_10m));
+        chart("dv10midi+3", @Json.Serialize(Model.hourly.winddirection_10m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.winddirection_10m));
+
+        chart("dv10minuit+4", @Json.Serialize(Model.hourly.winddirection_10m.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.winddirection_10m));
+        chart("dv10midi+4", @Json.Serialize(Model.hourly.winddirection_10m.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.winddirection_10m));
+
+        chart("dv10minuit+5", @Json.Serialize(Model.hourly.winddirection_10m.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.winddirection_10m));
+        chart("dv10midi+5", @Json.Serialize(Model.hourly.winddirection_10m.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.winddirection_10m));
+
+        chart("dv10minuit+6", @Json.Serialize(Model.hourly.winddirection_10m.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.winddirection_10m));
+        chart("dv10midi+6", @Json.Serialize(Model.hourly.winddirection_10m.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.winddirection_10m));
+
+    //-----------------Direction du vent en 80m
+    chart("dv80minuit+0", @Json.Serialize(Model.hourly.winddirection_80m.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.winddirection_80m));
+    chart("dv80midi+0", @Json.Serialize(Model.hourly.winddirection_80m.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.winddirection_80m));
+
+    chart("dv80minuit+1", @Json.Serialize(Model.hourly.winddirection_80m.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.winddirection_80m));
+    chart("dv80midi+1", @Json.Serialize(Model.hourly.winddirection_80m.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.winddirection_80m));
+
+    chart("dv80minuit+2", @Json.Serialize(Model.hourly.winddirection_80m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.winddirection_80m));
+    chart("dv80midi+2", @Json.Serialize(Model.hourly.winddirection_80m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.winddirection_80m));
+
+    chart("dv80minuit+3", @Json.Serialize(Model.hourly.winddirection_80m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.winddirection_80m));
+    chart("dv80midi+3", @Json.Serialize(Model.hourly.winddirection_80m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.winddirection_80m));
+
+    chart("dv80minuit+4", @Json.Serialize(Model.hourly.winddirection_80m.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.winddirection_80m));
+    chart("dv80midi+4", @Json.Serialize(Model.hourly.winddirection_80m.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.winddirection_80m));
+
+    chart("dv80minuit+5", @Json.Serialize(Model.hourly.winddirection_80m.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.winddirection_80m));
+    chart("dv80midi+5", @Json.Serialize(Model.hourly.winddirection_80m.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.winddirection_80m));
+
+    chart("dv80minuit+6", @Json.Serialize(Model.hourly.winddirection_80m.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 80m par heure du Minuit", @Json.Serialize(Model.hourly_units.winddirection_80m));
+    chart("dv80midi+6", @Json.Serialize(Model.hourly.winddirection_80m.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Direction du vent en 80m par heure du Midi", @Json.Serialize(Model.hourly_units.winddirection_80m));
+
+
+    //-----------------Rafales en 10m
+    chart("r10minuit+0", @Json.Serialize(Model.hourly.windgusts_10m.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Rafales en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.windgusts_10m));
+    chart("r10midi+0", @Json.Serialize(Model.hourly.windgusts_10m.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Rafales en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.windgusts_10m));
+
+    chart("r10minuit+1", @Json.Serialize(Model.hourly.windgusts_10m.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Rafales en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.windgusts_10m));
+    chart("r10midi+1", @Json.Serialize(Model.hourly.windgusts_10m.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Rafales en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.windgusts_10m));
+
+    chart("r10minuit+2", @Json.Serialize(Model.hourly.windgusts_10m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Rafales en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.windgusts_10m));
+    chart("r10midi+2", @Json.Serialize(Model.hourly.windgusts_10m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Rafales en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.windgusts_10m));
+
+    chart("r10minuit+3", @Json.Serialize(Model.hourly.windgusts_10m.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Rafales en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.windgusts_10m));
+    chart("r10midi+3", @Json.Serialize(Model.hourly.windgusts_10m.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Rafales en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.windgusts_10m));
+
+    chart("r10minuit+4", @Json.Serialize(Model.hourly.windgusts_10m.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Rafales en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.windgusts_10m));
+    chart("r10midi+4", @Json.Serialize(Model.hourly.windgusts_10m.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Rafales en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.windgusts_10m));
+
+    chart("r10minuit+5", @Json.Serialize(Model.hourly.windgusts_10m.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Rafales en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.windgusts_10m));
+    chart("r10midi+5", @Json.Serialize(Model.hourly.windgusts_10m.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Rafales en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.windgusts_10m));
+
+    chart("r10minuit+6", @Json.Serialize(Model.hourly.windgusts_10m.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Rafales en 10m par heure du Minuit", @Json.Serialize(Model.hourly_units.windgusts_10m));
+    chart("r10midi+6", @Json.Serialize(Model.hourly.windgusts_10m.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Rafales en 10m par heure du Midi", @Json.Serialize(Model.hourly_units.windgusts_10m));
+
+     //-----------------Temperature du Sol en 0cm
+    chart("ts0minuit+0", @Json.Serialize(Model.hourly.soil_temperature_0cm.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 0cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_0cm));
+    chart("ts0midi+0", @Json.Serialize(Model.hourly.soil_temperature_0cm.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 0cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_0cm));
+
+    chart("ts0minuit+1", @Json.Serialize(Model.hourly.soil_temperature_0cm.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 0cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_0cm));
+    chart("ts0midi+1", @Json.Serialize(Model.hourly.soil_temperature_0cm.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 0cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_0cm));
+
+    chart("ts0minuit+2", @Json.Serialize(Model.hourly.soil_temperature_0cm.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 0cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_0cm));
+    chart("ts0midi+2", @Json.Serialize(Model.hourly.soil_temperature_0cm.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 0cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_0cm));
+
+    chart("ts0minuit+3", @Json.Serialize(Model.hourly.soil_temperature_0cm.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 0cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_0cm));
+    chart("ts0midi+3", @Json.Serialize(Model.hourly.soil_temperature_0cm.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 0cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_0cm));
+
+    chart("ts0minuit+4", @Json.Serialize(Model.hourly.soil_temperature_0cm.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 0cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_0cm));
+    chart("ts0midi+4", @Json.Serialize(Model.hourly.soil_temperature_0cm.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 0cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_0cm));
+
+    chart("ts0minuit+5", @Json.Serialize(Model.hourly.soil_temperature_0cm.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 0cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_0cm));
+    chart("ts0midi+5", @Json.Serialize(Model.hourly.soil_temperature_0cm.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 0cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_0cm));
+
+    chart("ts0minuit+6", @Json.Serialize(Model.hourly.soil_temperature_0cm.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 0cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_0cm));
+    chart("ts0midi+6", @Json.Serialize(Model.hourly.soil_temperature_0cm.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 0cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_0cm));
+
+     //-----------------Temperature du Sol en 6cm
+    chart("ts6minuit+0", @Json.Serialize(Model.hourly.soil_temperature_6cm.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 6cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_6cm));
+    chart("ts6midi+0", @Json.Serialize(Model.hourly.soil_temperature_6cm.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 6cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_6cm));
+
+    chart("ts6minuit+1", @Json.Serialize(Model.hourly.soil_temperature_6cm.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 6cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_6cm));
+    chart("ts6midi+1", @Json.Serialize(Model.hourly.soil_temperature_6cm.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 6cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_6cm));
+
+    chart("ts6minuit+2", @Json.Serialize(Model.hourly.soil_temperature_6cm.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 6cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_6cm));
+    chart("ts6midi+2", @Json.Serialize(Model.hourly.soil_temperature_6cm.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 6cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_6cm));
+
+    chart("ts6minuit+3", @Json.Serialize(Model.hourly.soil_temperature_6cm.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 6cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_6cm));
+    chart("ts6midi+3", @Json.Serialize(Model.hourly.soil_temperature_6cm.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 6cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_6cm));
+
+    chart("ts6minuit+4", @Json.Serialize(Model.hourly.soil_temperature_6cm.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 6cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_6cm));
+    chart("ts6midi+4", @Json.Serialize(Model.hourly.soil_temperature_6cm.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 6cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_6cm));
+
+    chart("ts6minuit+5", @Json.Serialize(Model.hourly.soil_temperature_6cm.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 6cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_6cm));
+    chart("ts6midi+5", @Json.Serialize(Model.hourly.soil_temperature_6cm.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 6cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_6cm));
+
+    chart("ts6minuit+6", @Json.Serialize(Model.hourly.soil_temperature_6cm.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 6cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_6cm));
+    chart("ts6midi+6", @Json.Serialize(Model.hourly.soil_temperature_6cm.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 6cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_6cm));
+
+      //-----------------Temperature du Sol en 18cm
+    chart("ts18minuit+0", @Json.Serialize(Model.hourly.soil_temperature_18cm.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 18cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_18cm));
+    chart("ts18midi+0", @Json.Serialize(Model.hourly.soil_temperature_18cm.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 18cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_18cm));
+
+    chart("ts18minuit+1", @Json.Serialize(Model.hourly.soil_temperature_18cm.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 18cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_18cm));
+    chart("ts18midi+1", @Json.Serialize(Model.hourly.soil_temperature_18cm.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 18cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_18cm));
+
+    chart("ts18minuit+2", @Json.Serialize(Model.hourly.soil_temperature_18cm.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 18cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_18cm));
+    chart("ts18midi+2", @Json.Serialize(Model.hourly.soil_temperature_18cm.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 18cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_18cm));
+
+    chart("ts18minuit+3", @Json.Serialize(Model.hourly.soil_temperature_18cm.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 18cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_18cm));
+    chart("ts18midi+3", @Json.Serialize(Model.hourly.soil_temperature_18cm.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 18cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_18cm));
+
+    chart("ts18minuit+4", @Json.Serialize(Model.hourly.soil_temperature_18cm.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 18cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_18cm));
+    chart("ts18midi+4", @Json.Serialize(Model.hourly.soil_temperature_18cm.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 18cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_18cm));
+
+    chart("ts18minuit+5", @Json.Serialize(Model.hourly.soil_temperature_18cm.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 18cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_18cm));
+    chart("ts18midi+5", @Json.Serialize(Model.hourly.soil_temperature_18cm.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 18cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_18cm));
+
+    chart("ts18minuit+6", @Json.Serialize(Model.hourly.soil_temperature_18cm.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 18cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_temperature_18cm));
+    chart("ts18midi+6", @Json.Serialize(Model.hourly.soil_temperature_18cm.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Temperature du Sol en 18cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_temperature_18cm));
+
+
+    
+      //-----------------Humidité du Sol entre 0 et 1 cm
+    chart("hs0minuit+0", @Json.Serialize(Model.hourly.soil_moisture_0_1cm.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 0 et 1 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_0_1cm));
+    chart("hs0midi+0", @Json.Serialize(Model.hourly.soil_moisture_0_1cm.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 0 et 1 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_0_1cm));
+
+    chart("hs0minuit+1", @Json.Serialize(Model.hourly.soil_moisture_0_1cm.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 0 et 1 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_0_1cm));
+    chart("hs0midi+1", @Json.Serialize(Model.hourly.soil_moisture_0_1cm.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 0 et 1 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_0_1cm));
+
+    chart("hs0minuit+2", @Json.Serialize(Model.hourly.soil_moisture_0_1cm.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 0 et 1 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_0_1cm));
+    chart("hs0midi+2", @Json.Serialize(Model.hourly.soil_moisture_0_1cm.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 0 et 1 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_0_1cm));
+
+    chart("hs0minuit+3", @Json.Serialize(Model.hourly.soil_moisture_0_1cm.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 0 et 1 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_0_1cm));
+    chart("hs0midi+3", @Json.Serialize(Model.hourly.soil_moisture_0_1cm.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 0 et 1 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_0_1cm));
+
+    chart("hs0minuit+4", @Json.Serialize(Model.hourly.soil_moisture_0_1cm.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 0 et 1 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_0_1cm));
+    chart("hs0midi+4", @Json.Serialize(Model.hourly.soil_moisture_0_1cm.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 0 et 1 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_0_1cm));
+
+    chart("hs0minuit+5", @Json.Serialize(Model.hourly.soil_moisture_0_1cm.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 0 et 1 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_0_1cm));
+    chart("hs0midi+5", @Json.Serialize(Model.hourly.soil_moisture_0_1cm.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 0 et 1 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_0_1cm));
+
+    chart("hs0minuit+6", @Json.Serialize(Model.hourly.soil_moisture_0_1cm.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 0 et 1 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_0_1cm));
+    chart("hs0midi+6", @Json.Serialize(Model.hourly.soil_moisture_0_1cm.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 0 et 1 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_0_1cm));
+
+    
+      //-----------------Humidité du Sol entre 1 et 3 cm
+    chart("hs1minuit+0", @Json.Serialize(Model.hourly.soil_moisture_1_3cm.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 1 et 3 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_1_3cm));
+    chart("hs1midi+0", @Json.Serialize(Model.hourly.soil_moisture_1_3cm.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 1 et 3 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_1_3cm));
+
+    chart("hs1minuit+1", @Json.Serialize(Model.hourly.soil_moisture_1_3cm.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 1 et 3 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_1_3cm));
+    chart("hs1midi+1", @Json.Serialize(Model.hourly.soil_moisture_1_3cm.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 1 et 3 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_1_3cm));
+
+    chart("hs1minuit+2", @Json.Serialize(Model.hourly.soil_moisture_1_3cm.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 1 et 3 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_1_3cm));
+    chart("hs1midi+2", @Json.Serialize(Model.hourly.soil_moisture_1_3cm.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 1 et 3 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_1_3cm));
+
+    chart("hs1minuit+3", @Json.Serialize(Model.hourly.soil_moisture_1_3cm.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 1 et 3 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_1_3cm));
+    chart("hs1midi+3", @Json.Serialize(Model.hourly.soil_moisture_1_3cm.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 1 et 3 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_1_3cm));
+
+    chart("hs1minuit+4", @Json.Serialize(Model.hourly.soil_moisture_1_3cm.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 1 et 3 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_1_3cm));
+    chart("hs1midi+4", @Json.Serialize(Model.hourly.soil_moisture_1_3cm.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 1 et 3 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_1_3cm));
+
+    chart("hs1minuit+5", @Json.Serialize(Model.hourly.soil_moisture_1_3cm.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 1 et 3 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_1_3cm));
+    chart("hs1midi+5", @Json.Serialize(Model.hourly.soil_moisture_1_3cm.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 1 et 3 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_1_3cm));
+
+    chart("hs1minuit+6", @Json.Serialize(Model.hourly.soil_moisture_1_3cm.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 1 et 3 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_1_3cm));
+    chart("hs1midi+6", @Json.Serialize(Model.hourly.soil_moisture_1_3cm.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 1 et 3 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_1_3cm));
+
+     //-----------------Humidité du Sol entre 3 et 9 cm
+    chart("hs3minuit+0", @Json.Serialize(Model.hourly.soil_moisture_3_9cm.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 3 et 9 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_3_9cm));
+    chart("hs3midi+0", @Json.Serialize(Model.hourly.soil_moisture_3_9cm.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 3 et 9 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_3_9cm));
+
+    chart("hs3minuit+1", @Json.Serialize(Model.hourly.soil_moisture_3_9cm.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 3 et 9 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_3_9cm));
+    chart("hs3midi+1", @Json.Serialize(Model.hourly.soil_moisture_3_9cm.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 3 et 9 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_3_9cm));
+
+    chart("hs3minuit+2", @Json.Serialize(Model.hourly.soil_moisture_3_9cm.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 3 et 9 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_3_9cm));
+    chart("hs3midi+2", @Json.Serialize(Model.hourly.soil_moisture_3_9cm.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 3 et 9 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_3_9cm));
+
+    chart("hs3minuit+3", @Json.Serialize(Model.hourly.soil_moisture_3_9cm.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 3 et 9 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_3_9cm));
+    chart("hs3midi+3", @Json.Serialize(Model.hourly.soil_moisture_3_9cm.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 3 et 9 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_3_9cm));
+
+    chart("hs3minuit+4", @Json.Serialize(Model.hourly.soil_moisture_3_9cm.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 3 et 9 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_3_9cm));
+    chart("hs3midi+4", @Json.Serialize(Model.hourly.soil_moisture_3_9cm.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 3 et 9 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_3_9cm));
+
+    chart("hs3minuit+5", @Json.Serialize(Model.hourly.soil_moisture_3_9cm.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 3 et 9 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_3_9cm));
+    chart("hs3midi+5", @Json.Serialize(Model.hourly.soil_moisture_3_9cm.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 3 et 9 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_3_9cm));
+
+    chart("hs3minuit+6", @Json.Serialize(Model.hourly.soil_moisture_3_9cm.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 3 et 9 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_3_9cm));
+    chart("hs3midi+6", @Json.Serialize(Model.hourly.soil_moisture_3_9cm.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 3 et 9 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_3_9cm));
+
+    //-----------------Humidité du Sol entre 3 et 9 cm
+    chart("hs9minuit+0", @Json.Serialize(Model.hourly.soil_moisture_9_27cm.GetRange(0, 12)), @Json.Serialize(Model.hourly.time.GetRange(0, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 9 et 27 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_9_27cm));
+    chart("hs9midi+0", @Json.Serialize(Model.hourly.soil_moisture_9_27cm.GetRange(12, 12)), @Json.Serialize(Model.hourly.time.GetRange(12, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 9 et 27 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_9_27cm));
+
+    chart("hs9minuit+1", @Json.Serialize(Model.hourly.soil_moisture_9_27cm.GetRange(24, 12)), @Json.Serialize(Model.hourly.time.GetRange(24, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 9 et 27 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_9_27cm));
+    chart("hs9midi+1", @Json.Serialize(Model.hourly.soil_moisture_9_27cm.GetRange(36, 12)), @Json.Serialize(Model.hourly.time.GetRange(36, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 9 et 27 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_9_27cm));
+
+    chart("hs9minuit+2", @Json.Serialize(Model.hourly.soil_moisture_9_27cm.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 9 et 27 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_9_27cm));
+    chart("hs9midi+2", @Json.Serialize(Model.hourly.soil_moisture_9_27cm.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 9 et 27 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_9_27cm));
+
+    chart("hs9minuit+3", @Json.Serialize(Model.hourly.soil_moisture_9_27cm.GetRange(48, 12)), @Json.Serialize(Model.hourly.time.GetRange(48, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 9 et 27 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_9_27cm));
+    chart("hs9midi+3", @Json.Serialize(Model.hourly.soil_moisture_9_27cm.GetRange(60, 12)), @Json.Serialize(Model.hourly.time.GetRange(60, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 9 et 27 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_9_27cm));
+
+    chart("hs9minuit+4", @Json.Serialize(Model.hourly.soil_moisture_9_27cm.GetRange(72, 12)), @Json.Serialize(Model.hourly.time.GetRange(72, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 9 et 27 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_9_27cm));
+    chart("hs9midi+4", @Json.Serialize(Model.hourly.soil_moisture_9_27cm.GetRange(84, 12)), @Json.Serialize(Model.hourly.time.GetRange(84, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 9 et 27 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_9_27cm));
+
+    chart("hs9minuit+5", @Json.Serialize(Model.hourly.soil_moisture_9_27cm.GetRange(96, 12)), @Json.Serialize(Model.hourly.time.GetRange(96, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 9 et 27 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_9_27cm));
+    chart("hs9midi+5", @Json.Serialize(Model.hourly.soil_moisture_9_27cm.GetRange(108, 12)), @Json.Serialize(Model.hourly.time.GetRange(108, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 9 et 27 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_9_27cm));
+
+    chart("hs9minuit+6", @Json.Serialize(Model.hourly.soil_moisture_9_27cm.GetRange(120, 12)), @Json.Serialize(Model.hourly.time.GetRange(120, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 9 et 27 cm par heure du Minuit", @Json.Serialize(Model.hourly_units.soil_moisture_9_27cm));
+    chart("hs9midi+6", @Json.Serialize(Model.hourly.soil_moisture_9_27cm.GetRange(132, 12)), @Json.Serialize(Model.hourly.time.GetRange(132, 12).Select(dt => dt.ToString("H:mm"))), "Humidité du Sol entre 9 et 27 cm par heure du Midi", @Json.Serialize(Model.hourly_units.soil_moisture_9_27cm));
+
+    
+    </script>
+    <script type="text/javascript" src="~/weather/mdb.min.js"></script>

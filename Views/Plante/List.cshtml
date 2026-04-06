@@ -1,0 +1,93 @@
+﻿@model List<Fallah_App.Models.Plante>
+@section title{
+        <title>Liste des Plantes</title>
+}
+
+<div class="breadcomb-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="breadcomb-list">
+
+                    <div class="row">                      
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="breadcomb-wp">
+                                <div class="breadcomb-icon">
+                                    <i class="notika-icon notika-windows"></i>
+                                </div>
+                                <div class="breadcomb-ctn">
+                                    <h2>Plante</h2>
+                                    <p>Liste des plantes</p>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcomb area End-->
+<!-- Data Table area Start-->
+<div class="data-table-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                 
+                <div class="data-table-list">
+                    <div class="table-responsive">
+                        @if (ViewBag.Serr!=null){
+                            <h3 class="text-danger">La Supression est echoué La plante deja utilisé</h3>
+                        }
+                        <table id="data-table-basic" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>Type</th>
+                                    <th>Mois de debut</th>
+                                    <th>Mois de fin</th>
+                                    <th>Action</th>
+                    
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (Plante p in Model)
+                                {
+                                    <tr>
+                                        <td>@p.Nom</td>
+                                        <td>@p.type</td>
+                                        <td>@ViewBag.mois[p.Debut_Period]</td>
+                                        <td>@ViewBag.mois[p.Fin_Date]</td>                                       
+
+                                        <td>
+
+                                            <a class="btn btn-success success-icon-notika btn-reco-mg btn-button-mg" asp-controller="Plante" asp-action="Modifier" asp-route-id="@p.Id" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="Modifier  @p.Nom" data-original-title="Modifier">
+                                                    <i class="notika-icon notika-edit"></i>
+                                                </a>
+                                            <a class="btn btn-deeporange deeporange-icon-notika btn-reco-mg btn-button-mg sa-warning" data-confirm="Supprimer" data-text="La Plante vas étre supprimer" data-href="/Plante/Supprimer/@p.Id" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="supprimer  @p.Nom" data-original-title="Supprimer">
+                                                    <i class="notika-icon notika-close"></i>
+                                                </a>
+                                             
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>Type</th>
+                                    <th>Mois de debut</th>
+                                    <th>Mois de fin</th>
+                                    <th>Action</th>
+
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+﻿@model Fallah_App.Models.CategoryTerre
+@section title
+    {
+    <title>Modifier Categorie
+
+    </title>
+}
+
+<form method="post">
+    <div class="breadcomb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcomb-list">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="breadcomb-wp">
+                                    <div class="breadcomb-icon">
+                                        <i class="notika-icon notika-edit"></i>
+                                    </div>
+                                    <div class="breadcomb-ctn">
+                                        <h2>Modifier Categorie</h2>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-element-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-element-list mg-t-30">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group ic-cmp-int float-lb floating-lb">
+                                    <div class="form-ic-cmp">
+                                        <i class="notika-icon notika-support"></i>
+                                    </div>
+                                    <div class="nk-int-st">
+                                        <label asp-for="Attribut_De_Categorisation"></label>
+                                        <input asp-for="Attribut_De_Categorisation" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group ic-cmp-int float-lb floating-lb">
+                                    <div class="form-ic-cmp">
+                                        <i class="notika-icon notika-mail"></i>
+                                    </div>
+                                    <div class="nk-int-st">
+                                        <label asp-for="Valeur_Min"></label>
+                                        <input asp-for="Valeur_Min" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group ic-cmp-int float-lb floating-lb">
+                                    <div class="form-ic-cmp">
+                                        <i class="notika-icon notika-calendar"></i>
+                                    </div>
+                                    <div class="nk-int-st">
+                                        <label asp-for="Valeur_Max"></label>
+                                        <input asp-for="Valeur_Max" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="form-group ic-cmp-int float-lb form-elet-mg">
+                                        <div class="nk-int-st">
+                                            <input type="submit" class="btn btn-lightblue" value="Modifer" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</form>

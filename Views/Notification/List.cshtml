@@ -1,0 +1,95 @@
+﻿@model List<Fallah_App.Models.Notification>
+@section title{
+    <title>Liste des Notification</title>
+}
+
+    <div class="breadcomb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcomb-list">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="breadcomb-wp">
+                                    <div class="breadcomb-icon">
+                                        <i class="notika-icon notika-windows"></i>
+                                    </div>
+                                    <div class="breadcomb-ctn">
+                                        <h2>Notification</h2>
+                                        <p>Liste des Notifications</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Breadcomb area End-->
+<!-- Data Table area Start-->
+<div class="data-table-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                
+                <div class="data-table-list">
+                  
+                    <div class="table-responsive">
+                        @if (ViewBag.eror != null){
+                            <h4 class="text-danger text-center">Notification a ete deja envoye</h4>
+                        }
+                        <table id="data-table-basic" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Text français</th>
+                                    <th>Text arabic</th>
+                                    <th>Type</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (Notification N in Model)
+                                {
+                                    <tr>
+                                        <td>@Html.Raw( N.TextFrancais)</td>
+                                        <td>@Html.Raw(N.TextArabe) </td>
+                                        <td>@Html.Raw(N.type)</td>
+                                        <td>
+
+                                            <a class="btn btn-success success-icon-notika btn-reco-mg btn-button-mg" href="/Notification/Modifier/@N.Id" data-trigger="hover" data-toggle="popover" data-placement="top" title="Modifier" data-original-title="Modifier">
+                                                <i class="notika-icon notika-edit"></i>
+                                            </a>
+                                            <a class="btn btn-deeporange deeporange-icon-notika btn-reco-mg btn-button-mg sa-warning" data-confirm="Supprimer" data-text="Le Notification  vas etre supprimer" data-href="/Notification/Supprimer/@N.Id" data-trigger="hover" data-toggle="popover" data-placement="top" title="Supprimer" data-original-title="supprimer">
+                                                <i class="notika-icon notika-close"></i>
+                                            </a>
+                                            <a class="btn btn-lightblue lightblue-icon-notika btn-reco-mg btn-button-mg sa-warning" data-confirm="envoyer" data-text="Le Notification  vas etre Envoyer a toutes les agriculteures" data-href="/Notification/Broadcast/@N.Id" data-trigger="hover" data-toggle="popover" data-placement="top" title="Envoyer" data-content="Envoyer pour tous les agriculteures">
+                                                <i class="notika-icon notika-next"></i>
+                                            </a>
+                                            <a class="btn btn-lightgreen lightgreen-icon-notika btn-reco-mg btn-button-mg " href="/Notification/Specefic/@N.Id" data-trigger="hover" data-toggle="popover" data-placement="top" title="Envoyer" data-content="Envoyer pour un ou des agriculteures spécifique">
+                                                <i class="notika-icon notika-next"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    
+                                    <th>Text français</th>
+                                    <th>Text arabic</th>
+                                    <th>Type</th>
+                                    <th>Action</th>
+
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 

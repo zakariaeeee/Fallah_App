@@ -1,0 +1,172 @@
+﻿@model Fallah_App.Models.Plante
+@section title
+    {
+    <title>Modifier Plante</title>
+}
+    @section style
+    {
+    <link rel="stylesheet" href="~/css/bootstrap-select/bootstrap-select.css">
+    <style>
+        .bootstrap-select {
+            width: 100% !important;
+        }
+
+        .dcenter {
+            display: flex !important;
+            justify-content: center !important;
+        }
+
+        .hrzn-fm {
+            font-weight: bold !important;
+        }
+
+    </style>
+}
+    <div class="breadcomb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcomb-list">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="breadcomb-wp">
+                                    <div class="breadcomb-icon">
+                                        <i class="notika-icon notika-edit"></i>
+                                    </div>
+                                    <div class="breadcomb-ctn">
+                                        <h2>Plante</h2>
+                                        <p>Modifier Plante</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="form-example-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                        <div class="form-example-wrap mg-t-30">
+                            <div class="dcenter w-100">
+                                <div style="width:60%;">
+                                    <form method="post">
+                                        <div class="form-example-int form-horizental">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                                        <label class="hrzn-fm">Nom</label>
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                        <div class="nk-int-st">
+                                                        <input class="form-control input-lg" asp-for="Nom" placeholder="Tapez le nom du plante">
+                                                            <span asp-validation-for="Nom" class="text-danger"></span>
+                                                            <span class="text-danger">@ViewBag.errorNomPlante</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-example-int form-horizental mg-t-15">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                                        <label class="hrzn-fm">Type</label>
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+
+                                                        <div class="bootstrap-select fm-cmp-mg ">
+                                                            <select asp-for="type" class="selectpicker" data-live-search="true">
+
+                                                                <option class="text-center" value="Fruit">Fruit</option>
+                                                                <option class="text-center" value="Légumes">Légumes</option>
+
+
+                                                            </select>
+                                                            <span asp-validation-for="type" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-example-int form-horizental mg-t-15">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                                        <label class="hrzn-fm">Date Debut</label>
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                        <div class="bootstrap-select fm-cmp-mg w-100">
+                                                            <select asp-for="Debut_Period" class="selectpicker" data-live-search="true">
+                                                                <option class="text-center" value="1">Janvier</option>
+                                                                <option class="text-center" value="2">Février</option>
+                                                                <option class="text-center" value="3">Mars</option>
+                                                                <option class="text-center" value="4">Avril</option>
+                                                                <option class="text-center" value="5">Mai</option>
+                                                                <option class="text-center" value="6">Juin</option>
+                                                                <option class="text-center" value="7">Juillet</option>
+                                                                <option class="text-center" value="8">Août</option>
+                                                                <option class="text-center" value="9">Septembre</option>
+                                                                <option class="text-center" value="10">Octobre</option>
+                                                                <option class="text-center" value="11">Novembre</option>
+                                                                <option class="text-center" value="12">Décembre</option>
+                                                            </select>
+                                                            <span asp-validation-for="Debut_Period" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-example-int form-horizental mg-t-15">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                                        <label class="hrzn-fm">Date Fin</label>
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                        <div class="bootstrap-select fm-cmp-mg w-100">
+
+                                                            <select asp-for="Fin_Date" class="selectpicker" data-live-search="true">
+                                                                <option class="text-center" value="1">Janvier</option>
+                                                                <option class="text-center" value="2">Février</option>
+                                                                <option class="text-center" value="3">Mars</option>
+                                                                <option class="text-center" value="4">Avril</option>
+                                                                <option class="text-center" value="5">Mai</option>
+                                                                <option class="text-center" value="6">Juin</option>
+                                                                <option class="text-center" value="7">Juillet</option>
+                                                                <option class="text-center" value="8">Août</option>
+                                                                <option class="text-center" value="9">Septembre</option>
+                                                                <option class="text-center" value="10">Octobre</option>
+                                                                <option class="text-center" value="11">Novembre</option>
+                                                                <option class="text-center" value="12">Décembre</option>
+                                                            </select>
+                                                            <span asp-validation-for="Fin_Date" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-example-int mg-t-15">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-7 col-sm-7 col-xs-12 dcenter">
+                                                    <button class="btn btn-success notika-btn-success" type="submit">Modifier</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    @section script
+    {
+    <script src="~/js/bootstrap-select/bootstrap-select.js"></script>
+    <script src="~/js/jquery.scrollUp.min.js"></script>
+  }
